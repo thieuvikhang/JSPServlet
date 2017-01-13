@@ -12,24 +12,34 @@
         <title>JSP Page</title>
     </head>
     <body>
-            <h1 style="display:none;">Ranger theme</h1>
+            <h1 style="display:none;">KTLaptop</h1>
             <div class="home-slide">
                 <div class="container-fluid">
                     <div class="row ">
                         <div id="owl-demo-slide" class="owl-carousel owl-theme">
-                            <div class="item">
+                                <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/Online-Friday.png" alt="Slide">
+                                        <img src="./images/slider/slider-laptop.jpg" alt="Slide">
                                     </a>
                                 </div>
                                 <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/Online-Friday.png" alt="Slide">
+                                        <img src="./images/slider/slider-case.jpg" alt="Slide">
                                     </a>
                                 </div>
                                 <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/Online-Friday.png" alt="Slide">
+                                        <img src="./images/slider/slider-cm.jpg" alt="Slide">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#" title="Slide">
+                                        <img src="./images/slider/slider-i7-2.jpg" alt="Slide">
+                                    </a>
+                                </div>
+                                 <div class="item">
+                                    <a href="#" title="Slide">
+                                        <img src="./images/slider/slider-ati.jpg"" alt="Slide">
                                     </a>
                                 </div>
                             </div>

@@ -74,8 +74,8 @@
                         <div class="row ">
                             <div class="col-sm-6 col-md-3 logo">
                                 <div class="logo_content">
-                                    <a href="/" class="logo" title="Ranger theme">
-                                        <img src="./images/shop/logo.png" alt="Ranger theme">
+                                    <a href="/" class="logo" title="KTLaptop">
+                                        <img src="./images/shop/logo2.png" alt="KTLaptop">
                                     </a>
                                 </div>
                             </div>
