@@ -353,7 +353,6 @@ PRIMARY KEY (`pq_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 //Nhập
-INSERT INTO `pq` VALUES ('1', 'System', 'Admin System', '1');
-INSERT INTO `pq` VALUES ('2', 'Content', 'Admin quản lý nội dung', '2');
-INSERT INTO `pq` VALUES ('3', 'Bill and Feedback', 'Admin quản lý Bill and Feedback', '3');
-INSERT INTO `pq` VALUES ('4', 'View', 'Admin Chỉ xem', '4');
+INSERT INTO `pq` VALUES ('1', 'System Admin', 'Admin System', '1');
+INSERT INTO `pq` VALUES ('2', 'Content Admin', 'Admin quản lý nội dung', '2');
+INSERT INTO `pq` VALUES ('3', 'Salesman', 'Nhân viên bán hàng', '3');

@@ -74,7 +74,7 @@
                                     <div class="box-header with-border">
                                       <i class="fa fa-bar-chart-o"></i>
 
-                                      <h3 class="box-title">Doanh thu theo tháng</h3>
+                                      <h3 class="box-title">Doanh thu năm</h3>
 
                                       <div class="box-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -97,7 +97,7 @@
                                 <div class="col-xs-6">
                                     <div class="box box-danger">
                                         <div class="box-header with-border">
-                                          <h3 class="box-title">Loại sản phẩm</h3>
+                                          <h3 class="box-title">Lượt mua theo danh mục</h3>
 
                                           <div class="box-tools pull-right">
                                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -114,7 +114,7 @@
                                 <div class="col-xs-6">
                                     <div class="box box-danger">
                                         <div class="box-header with-border">
-                                          <h3 class="box-title">Thương hiệu</h3>
+                                          <h3 class="box-title">Lượt mua theo thương hiệu</h3>
 
                                           <div class="box-tools pull-right">
                                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -135,7 +135,7 @@
                                 <div class="col-xs-6">
                                     <div class="box box-danger">
                                         <div class="box-header with-border">
-                                          <h3 class="box-title">Khoảng giá</h3>
+                                          <h3 class="box-title">Lượt mua theo khoảng giá</h3>
 
                                           <div class="box-tools pull-right">
                                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -152,7 +152,7 @@
                                 <div class="col-xs-6">
                                     <div class="box box-danger">
                                         <div class="box-header with-border">
-                                          <h3 class="box-title">Màn hình</h3>
+                                          <h3 class="box-title">Lượt mua theo màn hình</h3>
 
                                           <div class="box-tools pull-right">
                                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
