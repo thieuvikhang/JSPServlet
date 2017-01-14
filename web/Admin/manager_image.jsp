@@ -89,10 +89,24 @@
                                           <td width="75px">
                                               <center> 
                                              <button <%=pqAdmin%> class="btn btn-primary btn-xs" onclick="location.href='${root}../Admin/update_image.jsp?image_id=<%=image.getImageID()%>&name=<%=image.getImageAlt()%>&image=<%=image.getImageImage()%>&id=<%=image.getProductID()%>&productname=<%=productDAO.getProduct(image.getProductID()).getProductName()%>'"><i class="glyphicon glyphicon-pencil"></i> Sửa</button>
-                                             <button <%=pqAdmin%> class="btn btn-danger btn-xs" onclick="location.href='../DelImageServlet?image_id=<%=image.getImageID()%>'"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
+                                             <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<%=image.getImageID()%>"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
                                                 </center> 
                                            </td>                                         
                                         </tr>
+                                        <div class="modal fade" id="myModal<%=image.getImageID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                              <h4 class="modal-title" id="myModalLabel">Bạn muốn xóa hình ảnh <strong><%=image.getImageAlt()%></strong></h4>
+                                            </div>         
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                              <button type="button" class="btn btn-danger" onclick="location.href='../DelImageServlet?image_id=<%=image.getImageID()%>'">Xóa</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                        <% }%>
                                        </tbody>
                                        <tfoot>

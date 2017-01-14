@@ -85,10 +85,24 @@
                                           <td width="75px"> 
                                               <center> 
                                              <button <%=pqAdmin%> class="btn btn-primary btn-xs" onclick="location.href='${root}../Admin/update_category.jsp?command=update&category_id=<%=category.getCategoryID()%>'"><i class="glyphicon glyphicon-pencil"></i> Sửa</button>
-                                             <button <%=pqAdmin%> class="btn btn-danger btn-xs" onclick="location.href='../ManagerCategoryServlet?command=delete&category_id=<%=category.getCategoryID()%>'"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
+                                             <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<%=category.getCategoryID()%>"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
                                                 </center> 
                                            </td>                                         
                                         </tr>
+                                        <div class="modal fade" id="myModal<%=category.getCategoryID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                              <h4 class="modal-title" id="myModalLabel">Bạn muốn xóa danh mục <strong><%=category.getCategoryName()%></strong></h4>
+                                            </div>         
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                              <button type="button" class="btn btn-danger" onclick="location.href='../ManagerCategoryServlet?command=delete&category_id=<%=category.getCategoryID()%>'">Xóa</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                        <% }%>
                                        </tbody>
                                        <tfoot>
@@ -100,6 +114,7 @@
                                             <th>Description</th>
                                             <th width="75px">Tùy chọn</th>
                                        </tr>
+                                       <!-- Modal -->
                                        </tfoot>
                                      </table>
                                    </div>

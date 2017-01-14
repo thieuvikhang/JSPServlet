@@ -79,10 +79,24 @@
                                           <td width="75px">
                                               <center> 
                                              <button <%=pqAdmin%> class="btn btn-primary btn-xs" onclick="location.href='${root}../Admin/update_cpu.jsp?command=update&cpu_id=<%=category.getCpuID()%>&name=<%=category.getCpuName()%>'"><i class="glyphicon glyphicon-pencil"></i> Sửa</button>
-                                             <button <%=pqAdmin%> class="btn btn-danger btn-xs" onclick="location.href='../ManagerCpuServlet?command=delete&cpu_id=<%=category.getCpuID()%>'"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
+                                             <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<%=category.getCpuID()%>"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
                                                 </center> 
                                            </td>                                         
                                         </tr>
+                                        <div class="modal fade" id="myModal<%=category.getCpuID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                              <h4 class="modal-title" id="myModalLabel">Bạn muốn xóa loại cpu <strong><%=category.getCpuName()%></strong></h4>
+                                            </div>         
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                              <button type="button" class="btn btn-danger" onclick="location.href='../ManagerCpuServlet?command=delete&cpu_id=<%=category.getCpuID()%>'">Xóa</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                        <% }%>
                                        </tbody>
                                        <tfoot>
