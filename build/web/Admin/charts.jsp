@@ -23,6 +23,8 @@
         <link rel="stylesheet" href="${root}/Admin/layout/plugins/datatables/dataTables.bootstrap.css">
         <link rel="stylesheet" href="${root}/Admin/layout/dist/css/AdminLTE.min.css">
         <link rel="stylesheet" href="${root}/Admin/layout/dist/css/skins/_all-skins.min.css">
+        
+        <link rel="stylesheet" href="${root}/Admin/layout/plugins/morris/morris.css">
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <%
@@ -71,6 +73,30 @@
                                </div>
                                <!-- /.col -->
                              </div>
+                            
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="box box-danger">
+                                        <div class="box-header with-border">
+                                          <h3 class="box-title">Donut Chart</h3>
+
+                                          <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                          </div>
+                                        </div>
+                                        <div class="box-body chart-responsive">
+                                          <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
+                                        </div>
+                                        <!-- /.box-body -->
+                                      </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    
+                                </div>
+                                
+                            </div>
                              <!-- /.row -->
                            </section>
 
@@ -93,6 +119,9 @@
             <script src="${root}/Admin/layout/plugins/flot/jquery.flot.resize.min.js"></script>
             <script src="${root}/Admin/layout/plugins/flot/jquery.flot.pie.min.js"></script>
             <script src="${root}/Admin/layout/plugins/flot/jquery.flot.categories.min.js"></script>
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+            <script src="${root}/Admin/layout/plugins/morris/morris.min.js"></script>
             <script>
                 
             $(function () {
@@ -124,6 +153,17 @@
                      }
                    });
                    /* END BAR CHART */
+                   var donut = new Morris.Donut({
+                    element: 'sales-chart',
+                    resize: true,
+                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                    data: [
+                      {label: "Download Sales", value: 12},
+                      {label: "In-Store Sales", value: 30},
+                      {label: "Mail-Order Sales", value: 20}
+                    ],
+                    hideHover: 'auto'
+                  });
             });
               function labelFormatter(label, series) {
     return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
