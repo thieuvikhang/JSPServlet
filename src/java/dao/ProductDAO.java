@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Product; 
+import model.Category; 
+import model.Pricelevel; 
+import model.Producer; 
+import model.Screensize; 
 public class ProductDAO 
 {     
     // get danh sách sản phẩm dựa vào mã danh mục    
@@ -604,9 +608,106 @@ public class ProductDAO
         return false;
         }
     }
+    // Tính tổng sản phẩm tìm kiếm
+    public int tongluotmualsp(String query) throws SQLException{
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT SUM(`product_buys`) FROM `product` WHERE `category_id` = '" + query + "'";
+        PreparedStatement ps = connection.prepareCall(sql);
+        ResultSet rs = ps.executeQuery();
+        int count = 0;
+        while (rs.next()) {
+            count = rs.getInt(1);
+        }
+        return count;
+    }
+    public int tongluotmuathuonghieu(String query) throws SQLException{
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT SUM(`product_buys`) FROM `product` WHERE `producer_id` = '" + query + "'";
+        PreparedStatement ps = connection.prepareCall(sql);
+        ResultSet rs = ps.executeQuery();
+        int count = 0;
+        while (rs.next()) {
+            count = rs.getInt(1);
+        }
+        return count;
+    }
+    public int tongluotmuakhoanggia(String query) throws SQLException{
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT SUM(`product_buys`) FROM `product` WHERE `pricelevel_id` = '" + query + "'";
+        PreparedStatement ps = connection.prepareCall(sql);
+        ResultSet rs = ps.executeQuery();
+        int count = 0;
+        while (rs.next()) {
+            count = rs.getInt(1);
+        }
+        return count;
+    }
+    public int tongluotmuamanhinh(String query) throws SQLException{
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT SUM(`product_buys`) FROM `product` WHERE `screensize_id` = '" + query + "'";
+        PreparedStatement ps = connection.prepareCall(sql);
+        ResultSet rs = ps.executeQuery();
+        int count = 0;
+        while (rs.next()) {
+            count = rs.getInt(1);
+        }
+        return count;
+    }
+    public ArrayList<Category> getListChartCategory()  throws SQLException {     
+        Connection connection = DBConnect.getConnecttion();      
+        String sql = "SELECT DISTINCT `category_id` FROM `product` WHERE `product_buys` > 0";      
+        PreparedStatement ps = connection.prepareCall(sql);       
+        ResultSet rs = ps.executeQuery();       
+        ArrayList<Category> list = new ArrayList<>();       
+        while (rs.next()) { 
+            Category category = new Category();       
+            category.setCategoryID(rs.getLong("category_id"));          
+            list.add(category);         
+        }         
+        return list;     
+    } 
+    public ArrayList<Producer> getListChartProducer()  throws SQLException {     
+        Connection connection = DBConnect.getConnecttion();      
+        String sql = "SELECT DISTINCT `producer_id` FROM `product` WHERE `product_buys` > 0";      
+        PreparedStatement ps = connection.prepareCall(sql);       
+        ResultSet rs = ps.executeQuery();       
+        ArrayList<Producer> list = new ArrayList<>();       
+        while (rs.next()) { 
+            Producer category = new Producer();       
+            category.setProducerID(rs.getLong("producer_id"));          
+            list.add(category);         
+        }         
+        return list;     
+    } 
+    public ArrayList<Pricelevel> getListChartPricelevel()  throws SQLException {     
+        Connection connection = DBConnect.getConnecttion();      
+        String sql = "SELECT DISTINCT `pricelevel_id` FROM `product` WHERE `product_buys` > 0";      
+        PreparedStatement ps = connection.prepareCall(sql);       
+        ResultSet rs = ps.executeQuery();       
+        ArrayList<Pricelevel> list = new ArrayList<>();       
+        while (rs.next()) { 
+            Pricelevel category = new Pricelevel();       
+            category.setPricelevelID(rs.getLong("pricelevel_id"));          
+            list.add(category);         
+        }         
+        return list;     
+    } 
+    public ArrayList<Screensize> getListChartScreensize()  throws SQLException {     
+        Connection connection = DBConnect.getConnecttion();      
+        String sql = "SELECT DISTINCT `screensize_id` FROM `product` WHERE `product_buys` > 0";      
+        PreparedStatement ps = connection.prepareCall(sql);       
+        ResultSet rs = ps.executeQuery();       
+        ArrayList<Screensize> list = new ArrayList<>();       
+        while (rs.next()) { 
+            Screensize category = new Screensize();       
+            category.setScreensizeID(rs.getLong("screensize_id"));          
+            list.add(category);         
+        }         
+        return list;     
+    } 
     public static void main(String[] args) throws SQLException {
         ProductDAO dao = new ProductDAO(); 
-        dao.updatetangluotmua("1", "5");
+        System.out.println(dao.tongluotmuakhoanggia("3"));
         for (Product ds : dao.getListProductByNav(1, 1, 9)) 
         {           
             System.out.println(ds.getProductID() +" - " + ds.getProductName());         

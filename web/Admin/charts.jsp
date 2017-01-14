@@ -4,8 +4,18 @@
     Author     : Toan
 --%>
 <%@page import="model.Bill"%>
-<%@page import="java.util.ArrayList"%>
 <%@page import="dao.BillDAO"%>
+<%@page import="model.Category"%>
+<%@page import="dao.CategoryDAO"%>
+<%@page import="model.Product"%>
+<%@page import="dao.ProductDAO"%>
+<%@page import="model.Producer"%>
+<%@page import="dao.ProducerDAO"%>
+<%@page import="model.Pricelevel"%>
+<%@page import="dao.PricelevelDAO"%>
+<%@page import="model.Screensize"%>
+<%@page import="dao.ScreensizeDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="helpers.MoneyFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,7 +38,6 @@
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <%
-            MoneyFormat formatter = new MoneyFormat();
             BillDAO billDAO = new BillDAO();    
             int thang1 = billDAO.doanhthuthang("1").getBillTotal();
             int thang2 = billDAO.doanhthuthang("2").getBillTotal();
@@ -42,6 +51,16 @@
             int thang10 = billDAO.doanhthuthang("10").getBillTotal();
             int thang11 = billDAO.doanhthuthang("11").getBillTotal();
             int thang12= billDAO.doanhthuthang("12").getBillTotal();
+            CategoryDAO categoryDAO = new CategoryDAO();
+            ProducerDAO producerDAO = new ProducerDAO();
+            PricelevelDAO pricelevelDAO = new PricelevelDAO();
+            ScreensizeDAO screensizeDAO = new ScreensizeDAO();
+            ProductDAO productDAO = new ProductDAO();
+            ArrayList<Category> listCategory = productDAO.getListChartCategory(); 
+            ArrayList<Producer> listProducer = productDAO.getListChartProducer(); 
+            ArrayList<Pricelevel> listPricelevel = productDAO.getListChartPricelevel(); 
+            ArrayList<Screensize> listScreensize = productDAO.getListChartScreensize(); 
+
         %>
          <div class="wrapper">
             <jsp:include page="./layout/header.jsp"></jsp:include>
@@ -151,7 +170,6 @@
                             </div>
                              <!-- /.row -->
                            </section>
-
 <!--                /MAIN------------------------------------------------------------------->
             </div>            
             <jsp:include page="./layout/footer.jsp"></jsp:include>
@@ -210,9 +228,11 @@
                     resize: true,
                     colors: ["#3c8dbc", "#f56954", "#00a65a"],
                     data: [
-                      {label: "Download Sales", value: 12},
-                      {label: "In-Store Sales", value: 30},
-                      {label: "Mail-Order Sales", value: 20}
+                        <%
+                           for(Category category : listCategory){
+                        %>
+                      {label: "<%=categoryDAO.getCategory(category.getCategoryID()).getCategoryName()%>", value: <%=productDAO.tongluotmualsp(String.valueOf(category.getCategoryID()))%>},
+                       <% }%>
                     ],
                     hideHover: 'auto'
                   });
@@ -222,9 +242,11 @@
                     resize: true,
                     colors: ["#3c8dbc", "#f56954", "#00a65a"],
                     data: [
-                      {label: "Download Sales", value: 12},
-                      {label: "In-Store Sales", value: 30},
-                      {label: "Mail-Order Sales", value: 20}
+                        <%
+                           for(Producer producer : listProducer){
+                        %>
+                      {label: "<%=producerDAO.getProducer(producer.getProducerID()).getProducerName()%>", value: <%=productDAO.tongluotmuathuonghieu(String.valueOf(producer.getProducerID()))%>},
+                        <% }%>
                     ],
                     hideHover: 'auto'
                   });
