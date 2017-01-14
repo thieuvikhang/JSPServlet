@@ -97,6 +97,19 @@ public class UsersDAO {
         return false;
         }
     }
+    //kiểm tra, trả về thông tin Bill theo Bill ID
+    public int countUsers() throws SQLException { 
+        Connection connection = DBConnect.getConnecttion();        
+        String sql = "SELECT count(`user_id`) FROM users";       
+        PreparedStatement ps = connection.prepareCall(sql);        
+        ResultSet rs = ps.executeQuery(); 
+        int sum = 0;
+        while (rs.next()) 
+        {                  
+            sum = (rs.getInt("count(`user_id`)"));         
+        }         
+        return sum;    
+    }
     //Đổi thông tin User
     public boolean updateUser(Users u, String UserID) throws SQLException {
         try {
@@ -148,6 +161,7 @@ public class UsersDAO {
     public static void main(String[] args) throws SQLException 
     {       
         UsersDAO dao = new UsersDAO(); 
+        System.out.println("Số user = "+dao.countUsers()); 
 //        for (Users ds : dao.getUserByEmail("demo@gmail.com")) 
 //        {           
 //            System.out.println(ds.getUserID()+" - " + ds.getUserFullName());         

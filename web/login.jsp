@@ -46,7 +46,10 @@
                                         <h3 class="form-heading">Đăng nhập</h3>
                                         <%if(session.getAttribute("error")!=null){%>
                                         <div>
-                                            <h4 style="color:red"><%=session.getAttribute("error")%></h4>
+                                            <div class="alert alert-danger alert-dismissable fade in">
+                                                <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
+                                                <strong>Thông báo!</strong> <%=session.getAttribute("error")%>
+                                            </div>
                                         </div> 
                                         <%}%>
                                         <div class="row info-input">
