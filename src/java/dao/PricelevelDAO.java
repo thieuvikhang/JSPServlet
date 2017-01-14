@@ -22,6 +22,22 @@ public class PricelevelDAO {
         }         
         return list;    
     }
+    public Pricelevel getPricelevel(long producerID) {
+    try {
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT * FROM pricelevel WHERE pricelevel_id = ?";
+        PreparedStatement ps = connection.prepareCall(sql);
+        ps.setLong(1, producerID);
+        ResultSet rs = ps.executeQuery();
+        Pricelevel u = new Pricelevel();
+        while (rs.next()) {
+        u.setPricelevelName(rs.getString("pricelevel_name"));
+        }
+    return u;
+    } catch (SQLException ex) {
+    }
+    return null;
+    }
     // get danh sách khoảng giá 
     public ArrayList<Pricelevel> getListPricelevel() throws SQLException { 
         Connection connection = DBConnect.getConnecttion();        

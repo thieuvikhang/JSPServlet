@@ -256,9 +256,11 @@
                     resize: true,
                     colors: ["#3c8dbc", "#f56954", "#00a65a"],
                     data: [
-                      {label: "Download Sales", value: 12},
-                      {label: "In-Store Sales", value: 30},
-                      {label: "Mail-Order Sales", value: 20}
+                        <%
+                           for(Pricelevel pricelevel : listPricelevel){
+                        %>
+                      {label: "<%=pricelevelDAO.getPricelevel(pricelevel.getPricelevelID()).getPricelevelName()%>", value: <%=productDAO.tongluotmuakhoanggia(String.valueOf(pricelevel.getPricelevelID()))%>},
+                       <% }%>
                     ],
                     hideHover: 'auto'
                   });
@@ -268,9 +270,11 @@
                     resize: true,
                     colors: ["#3c8dbc", "#f56954", "#00a65a"],
                     data: [
-                      {label: "Download Sales", value: 12},
-                      {label: "In-Store Sales", value: 30},
-                      {label: "Mail-Order Sales", value: 20}
+                        <%
+                           for(Screensize screensize : listScreensize){
+                        %>
+                      {label: "<%=screensizeDAO.getScreensize(screensize.getScreensizeID()).getScreensizeName()%>", value: <%=productDAO.tongluotmuamanhinh(String.valueOf(screensize.getScreensizeID()))%>},
+                       <% }%>
                     ],
                     hideHover: 'auto'
                   });

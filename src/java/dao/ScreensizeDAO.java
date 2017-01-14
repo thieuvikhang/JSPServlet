@@ -38,6 +38,22 @@ public class ScreensizeDAO {
         }         
         return list;    
     }
+    public Screensize getScreensize(long producerID) {
+    try {
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT * FROM screensize WHERE screensize_id = ?";
+        PreparedStatement ps = connection.prepareCall(sql);
+        ps.setLong(1, producerID);
+        ResultSet rs = ps.executeQuery();
+        Screensize u = new Screensize();
+        while (rs.next()) {
+        u.setScreensizeName(rs.getString("screensize_name"));
+        }
+    return u;
+    } catch (SQLException ex) {
+    }
+    return null;
+    }
     public static void main(String[] args) throws SQLException 
     {       
         ScreensizeDAO dao = new ScreensizeDAO();      

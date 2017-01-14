@@ -71,7 +71,6 @@ public class ProducerDAO {
         }
     return u;
     } catch (SQLException ex) {
-    
     }
     return null;
     }
