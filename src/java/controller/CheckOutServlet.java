@@ -16,10 +16,12 @@ import model.Cart;
 import model.Item;
 import model.Users;
 import model.Product;
+import dao.ProductDAO;
 import java.io.PrintWriter;
 import helpers.Sendmail;
 public class CheckOutServlet extends HttpServlet {
     private final BillDAO billDAO = new BillDAO();
+    private final ProductDAO productDAO = new ProductDAO();
     private final BillDetailDAO billDetailDAO = new BillDetailDAO();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -78,6 +80,8 @@ public class CheckOutServlet extends HttpServlet {
                         list.getValue().getQuantity(),
                         list.getValue().getProduct().getProductPriceReal(), billID
                         ));
+                productDAO.updatetangluotmua(String.valueOf(list.getValue().getProduct().getProductID()), String.valueOf(list.getValue().getQuantity()));
+                productDAO.updategiamtonkho(String.valueOf(list.getValue().getProduct().getProductID()), String.valueOf(list.getValue().getQuantity()));
             }
             Sendmail sm = new Sendmail();
             Sendmail.sendMail(users.getUserEmail(), "ShopLaptop", "Hello, "+users.getUserEmail()+"\nTotal: "+cart.total());

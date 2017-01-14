@@ -416,7 +416,6 @@ public class ProductDAO
     //set giảm số lượng tồn kho
     public boolean minusProduct(int id, int gia) {
         Connection connection = DBConnect.getConnecttion();
-
         String sql = "INSERT INTO users VALUES(?,?,?,?)";
         try {
             PreparedStatement ps = connection.prepareCall(sql);
@@ -553,8 +552,61 @@ public class ProductDAO
     }
     return null;
     }
+    public boolean updatetangluotmua(String product_id, String soluong ) throws SQLException {
+    try {
+            Connection connection = DBConnect.getConnecttion();
+            String sql = "UPDATE `product` set `product_buys` = `product_buys` + ? WHERE `product_id` = ?";
+            PreparedStatement ps = connection.prepareCall(sql);
+            ps.setString(1, soluong);
+            ps.setString(2, product_id);
+            int temp = ps.executeUpdate();
+            return temp == 1;
+        } catch (Exception e) {
+        return false;
+        }
+    }
+    public boolean updategiamluotmua(String product_id, String soluong ) throws SQLException {
+    try {
+            Connection connection = DBConnect.getConnecttion();
+            String sql = "UPDATE `product` set `product_buys` = `product_buys` - ? WHERE `product_id` = ?";
+            PreparedStatement ps = connection.prepareCall(sql);
+            ps.setString(1, soluong);
+            ps.setString(2, product_id);
+            int temp = ps.executeUpdate();
+            return temp == 1;
+        } catch (Exception e) {
+        return false;
+        }
+    }
+    public boolean updatetangtonkho(String product_id, String soluong ) throws SQLException {
+    try {
+            Connection connection = DBConnect.getConnecttion();
+            String sql = "UPDATE `product` set `product_inventory` = `product_inventory` + ? WHERE `product_id` = ?";
+            PreparedStatement ps = connection.prepareCall(sql);
+            ps.setString(1, soluong);
+            ps.setString(2, product_id);
+            int temp = ps.executeUpdate();
+            return temp == 1;
+        } catch (Exception e) {
+        return false;
+        }
+    }
+    public boolean updategiamtonkho(String product_id, String soluong ) throws SQLException {
+    try {
+            Connection connection = DBConnect.getConnecttion();
+            String sql = "UPDATE `product` set `product_inventory` = `product_inventory` - ? WHERE `product_id` = ?";
+            PreparedStatement ps = connection.prepareCall(sql);
+            ps.setString(1, soluong);
+            ps.setString(2, product_id);
+            int temp = ps.executeUpdate();
+            return temp == 1;
+        } catch (Exception e) {
+        return false;
+        }
+    }
     public static void main(String[] args) throws SQLException {
         ProductDAO dao = new ProductDAO(); 
+        dao.updatetangluotmua("1", "5");
         for (Product ds : dao.getListProductByNav(1, 1, 9)) 
         {           
             System.out.println(ds.getProductID() +" - " + ds.getProductName());         

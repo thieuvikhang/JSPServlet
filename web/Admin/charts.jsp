@@ -78,7 +78,7 @@
                                 <div class="col-xs-6">
                                     <div class="box box-danger">
                                         <div class="box-header with-border">
-                                          <h3 class="box-title">Donut Chart</h3>
+                                          <h3 class="box-title">Loại sản phẩm</h3>
 
                                           <div class="box-tools pull-right">
                                             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -87,13 +87,65 @@
                                           </div>
                                         </div>
                                         <div class="box-body chart-responsive">
-                                          <div class="chart" id="sales-chart" style="height: 300px; position: relative;"></div>
+                                          <div class="chart" id="1-chart" style="height: 300px; position: relative;"></div>
                                         </div>
                                         <!-- /.box-body -->
                                       </div>
                                 </div>
                                 <div class="col-xs-6">
-                                    
+                                    <div class="box box-danger">
+                                        <div class="box-header with-border">
+                                          <h3 class="box-title">Thương hiệu</h3>
+
+                                          <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                          </div>
+                                        </div>
+                                        <div class="box-body chart-responsive">
+                                          <div class="chart" id="2-chart" style="height: 300px; position: relative;"></div>
+                                        </div>
+                                        <!-- /.box-body -->
+                                      </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="box box-danger">
+                                        <div class="box-header with-border">
+                                          <h3 class="box-title">Khoảng giá</h3>
+
+                                          <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                          </div>
+                                        </div>
+                                        <div class="box-body chart-responsive">
+                                          <div class="chart" id="3-chart" style="height: 300px; position: relative;"></div>
+                                        </div>
+                                        <!-- /.box-body -->
+                                      </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="box box-danger">
+                                        <div class="box-header with-border">
+                                          <h3 class="box-title">Màn hình</h3>
+
+                                          <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                          </div>
+                                        </div>
+                                        <div class="box-body chart-responsive">
+                                          <div class="chart" id="4-chart" style="height: 300px; position: relative;"></div>
+                                        </div>
+                                        <!-- /.box-body -->
+                                      </div>
                                 </div>
                                 
                             </div>
@@ -153,8 +205,44 @@
                      }
                    });
                    /* END BAR CHART */
-                   var donut = new Morris.Donut({
-                    element: 'sales-chart',
+                   var donut1 = new Morris.Donut({
+                    element: '1-chart',
+                    resize: true,
+                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                    data: [
+                      {label: "Download Sales", value: 12},
+                      {label: "In-Store Sales", value: 30},
+                      {label: "Mail-Order Sales", value: 20}
+                    ],
+                    hideHover: 'auto'
+                  });
+                  
+                  var donut2 = new Morris.Donut({
+                    element: '2-chart',
+                    resize: true,
+                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                    data: [
+                      {label: "Download Sales", value: 12},
+                      {label: "In-Store Sales", value: 30},
+                      {label: "Mail-Order Sales", value: 20}
+                    ],
+                    hideHover: 'auto'
+                  });
+                  
+                  var donut3 = new Morris.Donut({
+                    element: '3-chart',
+                    resize: true,
+                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                    data: [
+                      {label: "Download Sales", value: 12},
+                      {label: "In-Store Sales", value: 30},
+                      {label: "Mail-Order Sales", value: 20}
+                    ],
+                    hideHover: 'auto'
+                  });
+                  
+                  var donut4 = new Morris.Donut({
+                    element: '4-chart',
                     resize: true,
                     colors: ["#3c8dbc", "#f56954", "#00a65a"],
                     data: [
