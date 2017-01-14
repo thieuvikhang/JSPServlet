@@ -45,7 +45,7 @@ public class InsertProductServlet extends HttpServlet {
                 FileItem item = (FileItem) items.get(i);
                 if(!item.isFormField())
                 {
-                    File archivo = new File("C:\\Users\\Khang\\Documents\\GitHub\\ShopLaptop\\web\\images\\product\\" + item.getName());
+                    File archivo = new File("C:\\Users\\Khang\\Documents\\GitHub\\JSPServlet\\web\\images\\product\\" + item.getName());
                     item.write(archivo);
                     imgs.add("" + item.getName());
                 } else {
@@ -55,8 +55,7 @@ public class InsertProductServlet extends HttpServlet {
             dao.insert(new Product(campos.get(0), campos.get(1), imgs.get(0), campos.get(2), campos.get(3), campos.get(4), campos.get(5), campos.get(6), campos.get(7), campos.get(8), campos.get(9), campos.get(10), campos.get(11), campos.get(12), campos.get(13), campos.get(14), campos.get(15), campos.get(16), campos.get(17), campos.get(18), campos.get(19), campos.get(20), campos.get(21), Integer.parseInt(campos.get(22)), Integer.parseInt(campos.get(23)), Integer.parseInt(campos.get(24)), timestamp, Integer.parseInt(campos.get(25)), Integer.parseInt(campos.get(26)), Long.parseLong(campos.get(27)), Long.parseLong(campos.get(28)), Long.parseLong(campos.get(29)), Long.parseLong(campos.get(30)), Long.parseLong(campos.get(31)), Long.parseLong(campos.get(32)), Long.parseLong(campos.get(33))));
         } catch (Exception e) {
         }
-        getServletContext().getRequestDispatcher("/Admin/manager_product.jsp").forward(
-                request, response);
+        response.sendRedirect("/Admin/manager_product.jsp");
     }
     @Override
     public String getServletInfo() {

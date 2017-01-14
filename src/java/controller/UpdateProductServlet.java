@@ -46,7 +46,7 @@ public class UpdateProductServlet extends HttpServlet {
                 FileItem item = (FileItem) items.get(i);
                 if(!item.isFormField())
                 {
-                    File archivo = new File("C:\\Users\\Khang\\Documents\\GitHub\\ShopLaptop\\web\\images\\product\\" + item.getName());
+                    File archivo = new File("C:\\Users\\Khang\\Documents\\GitHub\\JSPServlet\\web\\images\\product\\" + item.getName());
                     item.write(archivo);
                     imgs.add("" + item.getName());
                 } else {

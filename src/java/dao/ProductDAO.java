@@ -433,11 +433,11 @@ public class ProductDAO
     try {
             Connection connection = DBConnect.getConnecttion();
             String sql = "call insertproduct(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-            PreparedStatement ps = connection.prepareCall(sql);
-            ps.setString(1, p.getProductContent());
-            ps.setString(2, p.getProductName());
-            ps.setString(3, p.getProductImage());
-            ps.setString(4, p.getProductColor());         
+            PreparedStatement ps = connection.prepareCall(sql);  
+            ps.setString(1, p.getProductName());
+            ps.setString(2, p.getProductImage());
+            ps.setString(3, p.getProductColor());
+            ps.setString(4, p.getProductContent());
             ps.setString(5, p.getProductCpuDetail());
             ps.setString(6, p.getProductRamDetail());
             ps.setString(7, p.getProductStorageDetail());
