@@ -25,6 +25,32 @@ public class BillDAO {
         ps.setLong(10, bill.getUserID());
         ps.executeUpdate();
     }
+    //kiểm tra, trả về thông tin Bill theo Bill ID
+    public int countBillinMonth() throws SQLException { 
+        Connection connection = DBConnect.getConnecttion();        
+        String sql = "SELECT count(`bill_id`) FROM bill WHERE MONTH(`bill_date`) = MONTH(NOW())";       
+        PreparedStatement ps = connection.prepareCall(sql);        
+        ResultSet rs = ps.executeQuery(); 
+        int sum = 0;
+        while (rs.next()) 
+        {                  
+            sum = (rs.getInt("count(`bill_id`)"));         
+        }         
+        return sum;    
+    }
+    //Doanh thu tháng
+    public int sumBillinMonth() throws SQLException { 
+        Connection connection = DBConnect.getConnecttion();        
+        String sql = "SELECT sum(`bill_total`) FROM bill WHERE MONTH(`bill_date`) = MONTH(NOW())";       
+        PreparedStatement ps = connection.prepareCall(sql);        
+        ResultSet rs = ps.executeQuery(); 
+        int sum = 0;
+        while (rs.next()) 
+        {                  
+            sum = (rs.getInt("sum(`bill_total`)"));         
+        }         
+        return sum;    
+    }
     public ArrayList<Bill> getListBill() {
         try {
             Connection connection = DBConnect.getConnecttion();
@@ -256,14 +282,9 @@ public class BillDAO {
         }
         return null;
     }
-    public static void main(String[] args) throws SQLException {
-        
+    public static void main(String[] args) throws SQLException {        
         BillDAO dao = new BillDAO();      
-        System.out.println(dao.doanhthuthang("2").getBillTotal());
-//        for (Bill ds : dao.getBill("1483110241484")) 
-//        {           
-//            System.out.println(ds.getBillID()+" - " + ds.getBillPayment());         
-//        } 
+        System.out.println("Tổng "+dao.countBillinMonth());
     }
     
 }

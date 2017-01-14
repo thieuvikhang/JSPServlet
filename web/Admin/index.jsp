@@ -19,6 +19,7 @@
 <%@page import="dao.UsersDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.BillDAO"%>
+<%@page import="dao.FeedbackDAO"%>
 <%@page import="helpers.MoneyFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -57,7 +58,8 @@
             MoneyFormat formatter = new MoneyFormat();
             BillDAO billDAO = new BillDAO();
             ArrayList<Bill> listBill = billDAO.getListBillup();
-            UsersDAO usersDAO = new UsersDAO();            
+            UsersDAO usersDAO = new UsersDAO();    
+            FeedbackDAO feedbackDAO = new FeedbackDAO();
         %>
         <div class="wrapper">
             <jsp:include page="./layout/header.jsp"></jsp:include>
@@ -80,14 +82,14 @@
                         <!-- small box -->
                         <div class="small-box bg-aqua">
                           <div class="inner">
-                            <h3>150</h3>
+                            <h3><%=billDAO.countBillinMonth()%></h3>
 
-                            <p>New Orders</p>
+                            <p>Đơn hàng trong tháng</p>
                           </div>
                           <div class="icon">
                             <i class="ion ion-bag"></i>
                           </div>
-                          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                          <a href="../Admin/manager_bill.jsp" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                       </div>
                       <!-- ./col -->
@@ -95,14 +97,13 @@
                         <!-- small box -->
                         <div class="small-box bg-green">
                           <div class="inner">
-                            <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                            <p>Bounce Rate</p>
+                            <h3><%=feedbackDAO.countFeedback()%></h3>
+                            <p>Số góp ý chưa xem</p>
                           </div>
                           <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                           </div>
-                          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                          <a href="../Admin/feedback.jsp" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                       </div>
                       <!-- ./col -->
@@ -110,14 +111,14 @@
                         <!-- small box -->
                         <div class="small-box bg-yellow">
                           <div class="inner">
-                            <h3>44</h3>
+                            <h3><%=usersDAO.countUsers()%></h3>
 
-                            <p>User Registrations</p>
+                            <p>Tài khoảng khách hàng</p>
                           </div>
                           <div class="icon">
                             <i class="ion ion-person-add"></i>
                           </div>
-                          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                          <a href="../Admin/manager_users.jsp" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                       </div>
                       <!-- ./col -->
@@ -125,14 +126,13 @@
                         <!-- small box -->
                         <div class="small-box bg-red">
                           <div class="inner">
-                            <h3>65</h3>
-
-                            <p>Unique Visitors</p>
+                            <h3><%=formatter.format(billDAO.sumBillinMonth()) %></h3>
+                            <p>Doanh thu tháng hiện tại</p>
                           </div>
                           <div class="icon">
                             <i class="ion ion-pie-graph"></i>
                           </div>
-                          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                          <a href="../Admin/charts.jsp" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                       </div>
                       <!-- ./col -->

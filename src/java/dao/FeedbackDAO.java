@@ -29,6 +29,18 @@ public class FeedbackDAO {
         }         
         return list;    
     }
+    public int countFeedback() throws SQLException { 
+        Connection connection = DBConnect.getConnecttion();        
+        String sql = "SELECT count(`feedback_id`) FROM feedback WHERE `feedback_finish` = 0";       
+        PreparedStatement ps = connection.prepareCall(sql);        
+        ResultSet rs = ps.executeQuery(); 
+        int sum = 0;
+        while (rs.next()) 
+        {                  
+            sum = (rs.getInt("count(`feedback_id`)"));         
+        }         
+        return sum;    
+    }
     //Get góp ý theo ID
     public Feedback getFeedback(long feedbackID) throws SQLException 
     {
