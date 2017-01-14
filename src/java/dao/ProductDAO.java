@@ -14,6 +14,22 @@ import model.Producer;
 import model.Screensize; 
 public class ProductDAO 
 {     
+    public boolean checkProduct(String product) {
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT * FROM product WHERE product_name = '" + product + "'";
+        PreparedStatement ps;
+        try {
+            ps = connection.prepareCall(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                connection.close();
+            return true;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ProductDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
     // get danh sách sản phẩm dựa vào mã danh mục    
     public ArrayList<Product> getListProductByCategory(long category_id)  throws SQLException {     
         Connection connection = DBConnect.getConnecttion();      

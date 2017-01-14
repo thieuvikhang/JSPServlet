@@ -96,6 +96,10 @@
         <servlet-name>LogOutAdminServlet</servlet-name>
         <servlet-class>controller.LogOutAdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CheckProductServlet</servlet-name>
+        <servlet-class>controller.CheckProductServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CheckEmailServlet</servlet-name>
         <url-pattern>/CheckEmailServlet</url-pattern>
@@ -191,6 +195,10 @@
     <servlet-mapping>
         <servlet-name>LogOutAdminServlet</servlet-name>
         <url-pattern>/LogOutAdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckProductServlet</servlet-name>
+        <url-pattern>/CheckProductServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

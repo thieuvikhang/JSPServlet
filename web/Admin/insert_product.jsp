@@ -50,6 +50,25 @@
             <link rel="stylesheet" href="${root}/Admin/layout/plugins/select2/select2.min.css">
             <link rel="stylesheet" href="${root}/Admin/layout/dist/css/AdminLTE.min.css">
             <link rel="stylesheet" href="${root}/Admin/layout/dist/css/skins/_all-skins.min.css">
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              $(document).ready(function () {
+                   var x_timer;
+                   $("#tenDanhMuc").keyup(function (e) {
+                        clearTimeout(x_timer);
+                        var user_name = $(this).val();
+                        x_timer = setTimeout(function () {
+                            check_username_ajax(user_name);
+                        }, 1000);
+                        });
+                   function check_username_ajax(tenDanhMuc) {
+                        $("#tenDanhMuc-result").html('<img src="${root}/Admin/images/shop/ajax-loader.gif" />');
+                        $.post('../CheckProductServlet', {'tenDanhMuc':tenDanhMuc}, function (data) {
+                            $("#tenDanhMuc-result").html(data);
+                         });
+                   }
+               });
+        </script>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <%
@@ -114,7 +133,8 @@
                                         <div class="col-md-6">                                  
                                             <div class="form-group">
                                               <label>Tên sản phẩm</label>
-                                              <input type="text"  name="product_name" required class="form-control">
+                                              <input type="text"  id="tenDanhMuc" name="tenDanhMuc" required class="form-control">
+                                              <span id="tenDanhMuc-result"></span> 
                                             </div>                                                                                                                                                   
                                             <div class="form-group">
                                                 <label>Chọn hình ảnh</label>             

@@ -2,6 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/web/Admin/insert_image.jsp</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/src/java/controller/ManagerCategoryServlet.java</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/web/Admin/manager_admin.jsp</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/web/Admin/manager_category.jsp</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/web/Admin/manager_product.jsp</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/src/java/controller/AdminServlet.java</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/src/java/connect/DBConnect.java</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/web/Admin/manager_producer.jsp</file>
+            <file>file:/C:/Users/Khang/Documents/GitHub/JSPServlet/web/Admin/manager_bill.jsp</file>
+        </group>
     </open-files>
 </project-private>
