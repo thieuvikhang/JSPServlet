@@ -10,7 +10,7 @@
     if (admin == null) {
         response.sendRedirect("../Admin/login.jsp");
     }else{        
-        if(Integer.parseInt(session.getAttribute("pqAdmin").toString()) != 3 && Integer.parseInt(session.getAttribute("pqAdmin").toString()) != 1){
+        if(Integer.parseInt(session.getAttribute("pqAdmin").toString()) != 2 && Integer.parseInt(session.getAttribute("pqAdmin").toString()) != 1){
             pqAdmin = "disabled";
         }
     }

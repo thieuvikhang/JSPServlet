@@ -29,6 +29,23 @@ public class AdminDAO {
         }
         return false;
     }
+    public boolean updateAdmin(Admin a) throws SQLException {
+    try {
+            Connection connection = DBConnect.getConnecttion();
+            String sql = "UPDATE `admin` SET`admin_fullname`=?,`admin_avatar`=?,`admin_email`=?,`admin_pass`=?,`pq_id`=? WHERE `admin_id` = ?";
+            PreparedStatement ps = connection.prepareCall(sql);
+            ps.setString(1, a.getAdminfullName());
+            ps.setString(2, a.getAdminAvatar());
+            ps.setString(3, a.getAdminEmail());
+            ps.setString(4, a.getAdminPass());
+            ps.setLong(5, a.getPqID());
+            ps.setLong(6, a.getAdminID());
+            int temp = ps.executeUpdate();
+            return temp == 1;
+        } catch (SQLException e) {
+        return false;
+        }
+    }
     // get danh sách Admin  
     public ArrayList<Admin> getListAdmin() throws SQLException { 
         Connection connection = DBConnect.getConnecttion();        
@@ -116,6 +133,7 @@ public class AdminDAO {
             admin.setAdminfullName(rs.getString("admin_fullname"));
             admin.setAdminAvatar(rs.getString("admin_avatar")); 
             admin.setAdminEmail(rs.getString("admin_email")); 
+            admin.setAdminPass(rs.getString("admin_pass")); 
             admin.setPqID(rs.getLong("pq_id"));
         }
         return admin;

@@ -75,11 +75,11 @@
                               </div>
                               <!-- /.box-header -->
                               <!-- form start -->
-                              <form class="form-horizontal" action="../ManagerCategoryServlet" method="POST">
+                              <form class="form-horizontal" action="../AdminServlet" method="POST">
                                 <div class="box-body">
                                     <input type="hidden" name="command" value="update">
-                                    <input type="hidden" name="category_id" value="<%=admin.getAdminID()%>">
-                                  <input type="hidden" name="command" value="insert">
+                                    <input type="hidden" name="admin_id" value="<%=admin.getAdminID()%>">
+                                  <input type="hidden" name="command" value="update">
                                   <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Tên Admin</label>
 

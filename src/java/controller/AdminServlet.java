@@ -75,6 +75,22 @@ public class AdminServlet extends HttpServlet {
                 adminDAO.insertAdmin(admin);
                 url = "/Admin/manager_admin.jsp";
                 break;
+            case "update":
+                admin.setAdminID(Long.parseLong(request.getParameter("admin_id")));
+                admin.setAdminfullName(request.getParameter("fullname"));
+                admin.setAdminAvatar(request.getParameter("avatar"));
+                admin.setAdminEmail(request.getParameter("email"));
+                admin.setAdminPass(encrypt.hashmd5(request.getParameter("email"), request.getParameter("password")));
+                admin.setPqID(Integer.parseInt(request.getParameter("pq")));
+                {
+                    try {
+                        adminDAO.updateAdmin(admin);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(AdminServlet.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                url = "/Admin/manager_admin.jsp";
+                break;
             case "login":
                 session.setAttribute("error", "");
                 admin = adminDAO.login(request.getParameter("email"), encrypt.hashmd5(request.getParameter("email"), request.getParameter("password")));

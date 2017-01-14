@@ -96,7 +96,7 @@
                                                     %>
                                                     <button <%=pqAdmin%> class="btn btn-danger btn-xs" disabled onclick="location.href='../FeedbackServlet?command=delete&feedback_id=<%=feedback.getFeedbackID()%>'"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
                                                     <% } else {%>
-                                                    <button class="btn btn-danger btn-xs" onclick="location.href='../FeedbackServlet?command=delete&feedback_id=<%=feedback.getFeedbackID()%>'"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
+                                                    <button <%=pqAdmin%> class="btn btn-danger btn-xs" onclick="location.href='../FeedbackServlet?command=delete&feedback_id=<%=feedback.getFeedbackID()%>'"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
                                                     <% }%>
                                                 </center>
                                             </td>
