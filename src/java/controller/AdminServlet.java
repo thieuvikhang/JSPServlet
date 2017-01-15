@@ -64,6 +64,9 @@ public class AdminServlet extends HttpServlet {
         Admin admin = new Admin();
         Long id = new java.util.Date().getTime();
         HttpSession session = request.getSession();
+        session.setAttribute("adid", "");
+        session.setAttribute("aderror", "");
+        session.setAttribute("adnoti", "");
         switch (command) {
             case "insert":
                 admin.setAdminID(id);
@@ -73,6 +76,8 @@ public class AdminServlet extends HttpServlet {
                 admin.setAdminPass(encrypt.hashmd5(request.getParameter("email"), request.getParameter("password")));
                 admin.setPqID(Integer.parseInt(request.getParameter("pq")));
                 adminDAO.insertAdmin(admin);
+                session.setAttribute("adid", "noti");
+                session.setAttribute("adnoti", "Thêm sản phẩm thành công!.");
                 url = "/Admin/manager_admin.jsp";
                 break;
             case "update":
@@ -85,6 +90,8 @@ public class AdminServlet extends HttpServlet {
                 {
                     try {
                         adminDAO.updateAdmin(admin);
+                        session.setAttribute("adid", "noti");
+                        session.setAttribute("adnoti", "Sửa sản phẩm thành công!.");
                     } catch (SQLException ex) {
                         Logger.getLogger(AdminServlet.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -92,7 +99,6 @@ public class AdminServlet extends HttpServlet {
                 url = "/Admin/manager_admin.jsp";
                 break;
             case "login":
-                session.setAttribute("error", "");
                 admin = adminDAO.login(request.getParameter("email"), encrypt.hashmd5(request.getParameter("email"), request.getParameter("password")));
                 {
                     try { 
@@ -113,7 +119,8 @@ public class AdminServlet extends HttpServlet {
                     url = "/Admin/index.jsp";
                     break;
                 }else{
-                    session.setAttribute("error", "Email hoặc mật khẩu không đúng.!");
+                    session.setAttribute("adid", "error");
+                    session.setAttribute("aderror", "Email hoặc mật khẩu không đúng.!");
                     url = "/Admin/login.jsp";
                 }
                 break;

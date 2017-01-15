@@ -49,7 +49,10 @@
                     <%if(pqAdmin!="disabled"){%>
                     <a class="btn btn-primary mini_btn center-block" href="../Admin/insert_admin.jsp">THÊM MỚI</a>
                     <% }%>
+                    <br>
+                    
                   </section>
+                  
 <!--                MAIN------------------------------------------------------------------->
                         <section class="content">
                              <div class="row">
@@ -58,8 +61,13 @@
 
                                  <div class="box">
                                    <div class="box-header">
-                                     <h3 class="box-title">Bảng danh mục sản phẩm</h3>                                     
-                                     
+                                     <h3 class="box-title">Bảng danh mục sản phẩm</h3>                                    
+                                     <%if(session.getAttribute("adid")=="noti"){%>
+                                        <div class="alert alert-info alert-dismissable fade in">
+                                            <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
+                                            <strong><%=session.getAttribute("adnoti")%></strong>
+                                        </div>    
+                                      <% }%>
                                    </div>
                                    <!-- /.box-header -->
                                    <div class="box-body">

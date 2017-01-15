@@ -171,8 +171,8 @@
     </head>
     <body class="login-bg">
         <div class="login">
-        <%if(session.getAttribute("error")!=null){%>
-            <h4 style="color:red; text-align:center"><%=session.getAttribute("error")%></h4>
+        <%if(session.getAttribute("aderror")!=null){%>
+            <h4 style="color:red; text-align:center"><%=session.getAttribute("aderror")%></h4>
         <%}%>
         <h1>Login</h1>
         <form accept-charset='UTF-8' action="../AdminServlet" method="POST">

@@ -49,7 +49,7 @@
 <!DOCTYPE html>
 <html lang="vn">
     <head>                
-        <title>Chi tiết - <%=product.getProductMetaTitle()%></title>
+        <title>Chi tiết - <%=product.getProductName()%></title>
         <meta name="keywords" content="<%=product.getProductMetaKeywords()%>">
         <meta name="description" content="<%=product.getProductMetaDescription()%>">
         <jsp:include page = "layout/head.jsp"></jsp:include>
