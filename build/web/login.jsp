@@ -44,7 +44,7 @@
                                         <input name='utf8' type='hidden' value='true' />
                                         <input type="hidden" value="login" name="command" id="command"/>
                                         <h3 class="form-heading">Đăng nhập</h3>
-                                        <%if(session.getAttribute("error")!=null || session.getAttribute("noti")!=null)
+                                        <%if(session.getAttribute("error")!=null && session.getAttribute("noti")!=null)
                                             {if(session.getAttribute("idu")=="error"){%>
                                                 <div>
                                                 <div class="alert alert-danger alert-dismissable fade in">
