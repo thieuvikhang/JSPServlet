@@ -35,13 +35,14 @@ public class InsertProducerServlet extends HttpServlet {
         ServletFileUpload sfu = new ServletFileUpload(file_factory); 
         ArrayList<String> campos = new ArrayList<>();
         ArrayList<String> imgs = new ArrayList<>();
+        String path = getServletConfig().getServletContext().getRealPath("images/banner/");
         try {
             List items  = sfu.parseRequest(request);
             for (int i = 0; i < items.size(); i++) { 
                 FileItem item = (FileItem) items.get(i);
                 if(!item.isFormField())
                 {
-                    File archivo = new File("C:\\Users\\Khang\\Documents\\GitHub\\ShopLaptop\\web\\images\\banner\\" + item.getName());
+                    File archivo = new File(path + item.getName());
                     item.write(archivo);
                     imgs.add("" + item.getName());
                 } else {

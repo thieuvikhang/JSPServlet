@@ -49,13 +49,14 @@ public class InsertImageServlet extends HttpServlet {
         ServletFileUpload sfu = new ServletFileUpload(file_factory); 
         ArrayList<String> campos = new ArrayList<>();
         ArrayList<String> imgs = new ArrayList<>();
+        String path = getServletConfig().getServletContext().getRealPath("images/product/");
         try {
             List items  = sfu.parseRequest(request);
             for (int i = 0; i < items.size(); i++) { 
                 FileItem item = (FileItem) items.get(i);
                 if(!item.isFormField())
                 {
-                    File archivo = new File("C:\\Users\\Toan\\Desktop\\ShopLaptop\\web\\images\\product\\" + item.getName());
+                    File archivo = new File(path + item.getName());
                     item.write(archivo);
                     imgs.add("" + item.getName());
                 } else {

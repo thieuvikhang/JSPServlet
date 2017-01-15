@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Product;
 import java.util.Date;
-import javax.servlet.RequestDispatcher;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -40,13 +39,14 @@ public class UpdateProductServlet extends HttpServlet {
         ServletFileUpload sfu = new ServletFileUpload(file_factory); 
         ArrayList<String> campos = new ArrayList<>();
         ArrayList<String> imgs = new ArrayList<>();
+        String path = getServletConfig().getServletContext().getRealPath("images/product/");
         try {
             List items  = sfu.parseRequest(request);
             for (int i = 0; i < items.size(); i++) { 
                 FileItem item = (FileItem) items.get(i);
                 if(!item.isFormField())
                 {
-                    File archivo = new File("C:\\Users\\Khang\\Documents\\GitHub\\JSPServlet\\web\\images\\product\\" + item.getName());
+                    File archivo = new File(path + item.getName());
                     item.write(archivo);
                     imgs.add("" + item.getName());
                 } else {

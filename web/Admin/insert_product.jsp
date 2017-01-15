@@ -159,11 +159,11 @@
                                               <input type="text"  name="product_storagedetail" required class="form-control" placeholder="">
                                             </div>
                                             <div class="form-group">
-                                              <label>Màn hình</label>
+                                              <label>Kích thước màn hình</label>
                                               <input type="text"  name="product_screen" required class="form-control" placeholder="">
                                             </div>
                                             <div class="form-group">
-                                              <label>Màn hình</label>
+                                              <label>Chi tiết màn hình</label>
                                               <input type="text"  name="product_screendetail" required class="form-control" placeholder="">
                                             </div>
                                             <div class="form-group">
