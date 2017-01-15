@@ -306,7 +306,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li><a href="../Admin/index.jsp"><i class="fa fa-dashboard"></i> <span>DashBoard</span></a></li>
+        <li><a href="../Admin/index.jsp"><i class="fa fa-dashboard"></i> <span>Trang chủ</span></a></li>
         <li><a href="../Admin/manager_category.jsp"><i class="fa fa-list-ul"></i> <span>Danh mục</span></a></li>
         <li><a href="../Admin/manager_product.jsp"><i class="fa fa-laptop"></i> <span>Laptop</span></a></li>
         <li><a href="../Admin/manager_bill.jsp"><i class="fa fa-file-o"></i> <span>Hóa đơn</span></a></li>

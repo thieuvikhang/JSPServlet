@@ -192,99 +192,106 @@
             
             <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
             <script src="${root}/Admin/layout/plugins/morris/morris.min.js"></script>
-            <script>
-                
-            $(function () {
-                    /*
-                    * BAR CHART
-                    * ---------
-                    */
+            <script>             
+                    $(function () {
+                            /*
+                            * BAR CHART
+                            * ---------
+                            */
 
-                   var bar_data = {
-                     data: [["1", <%=thang1%>], ["2", <%=thang2%>], ["3", <%=thang3%>], ["4", <%=thang4%>], ["5", <%=thang5%>], ["6", <%=thang6%>], ["7", <%=thang7%>], ["8", <%=thang8%>], ["9", <%=thang9%>], ["10", <%=thang10%>], ["11", <%=thang11%>], ["12", <%=thang12%>]],
-                     color: "#3c8dbc"
-                   };
-                   $.plot("#bar-chart", [bar_data], {
-                     grid: {
-                       borderWidth: 1,
-                       borderColor: "#f3f3f3",
-                       tickColor: "#f3f3f3"
-                     },
-                     series: {
-                       bars: {
-                         show: true,
-                         barWidth: 0.5,
-                         align: "center"
-                       }
-                     },
-                     xaxis: {
-                       mode: "categories",
-                       tickLength: 0
-                     }
-                   });
-                   /* END BAR CHART */
-                   var donut1 = new Morris.Donut({
-                    element: '1-chart',
-                    resize: true,
-                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
-                    data: [
-                        <%
-                           for(Category category : listCategory){
-                        %>
-                      {label: "<%=categoryDAO.getCategory(category.getCategoryID()).getCategoryName()%>", value: <%=productDAO.tongluotmualsp(String.valueOf(category.getCategoryID()))%>},
-                       <% }%>
-                    ],
-                    hideHover: 'auto'
-                  });
-                  
-                  var donut2 = new Morris.Donut({
-                    element: '2-chart',
-                    resize: true,
-                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
-                    data: [
-                        <%
-                           for(Producer producer : listProducer){
-                        %>
-                      {label: "<%=producerDAO.getProducer(producer.getProducerID()).getProducerName()%>", value: <%=productDAO.tongluotmuathuonghieu(String.valueOf(producer.getProducerID()))%>},
-                        <% }%>
-                    ],
-                    hideHover: 'auto'
-                  });
-                  
-                  var donut3 = new Morris.Donut({
-                    element: '3-chart',
-                    resize: true,
-                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
-                    data: [
-                        <%
-                           for(Pricelevel pricelevel : listPricelevel){
-                        %>
-                      {label: "<%=pricelevelDAO.getPricelevel(pricelevel.getPricelevelID()).getPricelevelName()%>", value: <%=productDAO.tongluotmuakhoanggia(String.valueOf(pricelevel.getPricelevelID()))%>},
-                       <% }%>
-                    ],
-                    hideHover: 'auto'
-                  });
-                  
-                  var donut4 = new Morris.Donut({
-                    element: '4-chart',
-                    resize: true,
-                    colors: ["#3c8dbc", "#f56954", "#00a65a"],
-                    data: [
-                        <%
-                           for(Screensize screensize : listScreensize){
-                        %>
-                      {label: "<%=screensizeDAO.getScreensize(screensize.getScreensizeID()).getScreensizeName()%>", value: <%=productDAO.tongluotmuamanhinh(String.valueOf(screensize.getScreensizeID()))%>},
-                       <% }%>
-                    ],
-                    hideHover: 'auto'
-                  });
-            });
-              function labelFormatter(label, series) {
-    return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
-        + label
-        + "<br>"
-        + Math.round(series.percent) + "%</div>";
-  }
-</script>
+                           var bar_data = {
+                             data: [["1", <%=thang1%>], ["2", <%=thang2%>], ["3", <%=thang3%>], ["4", <%=thang4%>], ["5", <%=thang5%>], ["6", <%=thang6%>], ["7", <%=thang7%>], ["8", <%=thang8%>], ["9", <%=thang9%>], ["10", <%=thang10%>], ["11", <%=thang11%>], ["12", <%=thang12%>]],
+                             color: "#3c8dbc"
+                           };
+                           $.plot("#bar-chart", [bar_data], {
+                             grid: {
+                               borderWidth: 1,
+                               borderColor: "#f3f3f3",
+                               tickColor: "#f3f3f3"
+                             },
+                             series: {
+                               bars: {
+                                 show: true,
+                                 barWidth: 0.5,
+                                 align: "center"
+                               }
+                             },
+                             xaxis: {
+                               mode: "categories",
+                               tickLength: 0
+                             }
+                           });
+                           /* END BAR CHART */
+                           var donut1 = new Morris.Donut({
+                            element: '1-chart',
+                            resize: true,
+                            colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                            data: [
+                                <%
+                                   for(Category category : listCategory){
+                                %>
+                              {label: "<%=categoryDAO.getCategory(category.getCategoryID()).getCategoryName()%>", value: <%=productDAO.tongluotmualsp(String.valueOf(category.getCategoryID()))%>},
+                               <% }%>
+                            ],
+                            hideHover: 'auto'
+                          });
+
+                          var donut2 = new Morris.Donut({
+                            element: '2-chart',
+                            resize: true,
+                            colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                            data: [
+                                <%
+                                   for(Producer producer : listProducer){
+                                %>
+                              {label: "<%=producerDAO.getProducer(producer.getProducerID()).getProducerName()%>", value: <%=productDAO.tongluotmuathuonghieu(String.valueOf(producer.getProducerID()))%>},
+                                <% }%>
+                            ],
+                            hideHover: 'auto'
+                          });
+
+                          var donut3 = new Morris.Donut({
+                            element: '3-chart',
+                            resize: true,
+                            colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                            data: [
+                                <%
+                                   for(Pricelevel pricelevel : listPricelevel){
+                                %>
+                              {label: "<%=pricelevelDAO.getPricelevel(pricelevel.getPricelevelID()).getPricelevelName()%>", value: <%=productDAO.tongluotmuakhoanggia(String.valueOf(pricelevel.getPricelevelID()))%>},
+                               <% }%>
+                            ],
+                            hideHover: 'auto'
+                          });
+
+                          var donut4 = new Morris.Donut({
+                            element: '4-chart',
+                            resize: true,
+                            colors: ["#3c8dbc", "#f56954", "#00a65a"],
+                            data: [
+                                <%
+                                   for(Screensize screensize : listScreensize){
+                                %>
+                              {label: "<%=screensizeDAO.getScreensize(screensize.getScreensizeID()).getScreensizeName()%>", value: <%=productDAO.tongluotmuamanhinh(String.valueOf(screensize.getScreensizeID()))%>},
+                               <% }%>
+                            ],
+                            hideHover: 'auto'
+                          });
+                    });
+                      function labelFormatter(label, series) {
+            return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
+                + label
+                + "<br>"
+                + Math.round(series.percent) + "%</div>";
+          }
+        </script>
+        <script type="text/javascript">
+	$(function(){
+		$('.sidebar-menu a').filter(function(){return this.href===location.href;}).parent().addClass('active').siblings().removeClass('active');
+		$('.sidebar-menu a').click(function(){
+			$(this).parent().addClass('active').siblings().removeClass('active');	
+		});
+	});
+	</script>
     </body>
 </html>
