@@ -18,7 +18,7 @@ public class encrypt {
         }               
     }
     public static void main(String[] args) throws Exception {
-        System.out.println("Kết quả đã mã hóa: " + hashmd5("demo@gmail.com", "demo"));
+        System.out.println("Kết quả đã mã hóa: " + hashmd5("BoyIT_Wind@hotmail.com", "rQXStg"));
     }
     
 }

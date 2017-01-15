@@ -57,13 +57,13 @@ public class UserServlet extends HttpServlet {
                 users.setUserFullName(request.getParameter("fullname"));
                 users.setUserAddress(request.getParameter("address"));
                 users.setUserPhone(Long.parseLong(request.getParameter("phone")));
-                users.setUserEmail(request.getParameter("email"));
-                users.setUserPass(encrypt.hashmd5(request.getParameter("email"), request.getParameter("password")));
+                users.setUserEmail(request.getParameter("email").toLowerCase());
+                users.setUserPass(encrypt.hashmd5(request.getParameter("email").toLowerCase(), request.getParameter("password")));
                 usersDAO.insertUser(users);
                 url = "/login.jsp";
                 break;
             case "change":
-                users.setUserPass(encrypt.hashmd5(session.getAttribute("email").toString(), request.getParameter("repassword")));
+                users.setUserPass(encrypt.hashmd5(session.getAttribute("email").toString().toLowerCase(), request.getParameter("repassword")));
                 {
                     try {
                         usersDAO.updatePass(users,session.getAttribute("id").toString());
@@ -92,10 +92,10 @@ public class UserServlet extends HttpServlet {
                 break;
             case "login":
                 session.setAttribute("error", "");
-                users = usersDAO.login(request.getParameter("email"), encrypt.hashmd5(request.getParameter("email"), request.getParameter("password")));
+                users = usersDAO.login(request.getParameter("email").toLowerCase(), encrypt.hashmd5(request.getParameter("email").toLowerCase(), request.getParameter("password")));
                 {
                     try { 
-                        for (Users ds : usersDAO.getUserByEmail(request.getParameter("email")))
+                        for (Users ds : usersDAO.getUserByEmail(request.getParameter("email").toLowerCase()))
                         {
                             session.setAttribute("id", ds.getUserID());
                             session.setAttribute("name", ds.getUserFullName());

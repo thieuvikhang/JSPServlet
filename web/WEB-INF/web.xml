@@ -100,6 +100,10 @@
         <servlet-name>CheckProductServlet</servlet-name>
         <servlet-class>controller.CheckProductServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RandomPassServlet</servlet-name>
+        <servlet-class>controller.RandomPassServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CheckEmailServlet</servlet-name>
         <url-pattern>/CheckEmailServlet</url-pattern>
@@ -199,6 +203,10 @@
     <servlet-mapping>
         <servlet-name>CheckProductServlet</servlet-name>
         <url-pattern>/CheckProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RandomPassServlet</servlet-name>
+        <url-pattern>/RandomPassServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

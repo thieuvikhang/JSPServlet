@@ -36,7 +36,7 @@ public class Sendmail {
         return true;
     }    
     public static void main(String[] args) {
-        System.out.println(sendMail("Mail.Toan95@gmail.com", "Website Java Servlet", "Hello!"));
+        System.out.println(sendMail("Mail.Toan95@gmail.com", "Toàn", "Quốc Toàn!"));
     }
     
 }

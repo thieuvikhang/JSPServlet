@@ -97,6 +97,18 @@ public class UsersDAO {
         return false;
         }
     }
+    //Đổi mật khẩu
+    public boolean updatePassbyEmail(Users u, String EmailID) throws SQLException {
+        try {
+            Connection connection = DBConnect.getConnecttion();
+            String sql = "UPDATE users SET user_pass = '" + u.getUserPass() + "' WHERE user_email = '"+ EmailID + "'";
+            PreparedStatement ps = connection.prepareCall(sql);         
+            int temp = ps.executeUpdate();
+            return temp == 1;
+        } catch (Exception e) {
+        return false;
+        }
+    }
     //kiểm tra, trả về thông tin Bill theo Bill ID
     public int countUsers() throws SQLException { 
         Connection connection = DBConnect.getConnecttion();        
