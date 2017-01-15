@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.Users;
 import static helpers.RandomPass.randomString;
 import helpers.Sendmail;
 import static helpers.encrypt.hashmd5;
@@ -51,25 +50,31 @@ public class RandomPassServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         String url = "";
         HttpSession session = request.getSession();
+        session.setAttribute("idu", "");
         session.setAttribute("error", "");
-         Boolean checkEmail = usersDAO.checkEmail(request.getParameter("email").toLowerCase());
+        session.setAttribute("noti", "");
+        Boolean checkEmail = usersDAO.checkEmail(request.getParameter("email").toLowerCase());
         
         if(checkEmail == true)
         {
+            String newPass = randomString(6);
             try {
-                session.setAttribute("error", "Vui lòng kiểm tra Email: "+request.getParameter("email")+" !..");
-                String pass = hashmd5((request.getParameter("email").toString()).toLowerCase(), randomString(6));
-                usersDAO.updatePassbyEmail(pass ,(request.getParameter("email").toString()).toLowerCase());
+                session.setAttribute("idu", "noti");
+                session.setAttribute("noti", "Vui lòng kiểm tra Email: "+request.getParameter("email")+" !..");
+                String pass = hashmd5(request.getParameter("email").toLowerCase(), newPass);
+                usersDAO.updatePassbyEmail(pass ,request.getParameter("email").toLowerCase());
                 session.setAttribute("user", null);
-                Sendmail.sendMail(request.getParameter("email"), "KTLaptop", "New Password: " + randomString(6));
+                Sendmail.sendMail(request.getParameter("email"), "KTLaptop", "New Password: " + newPass);
                 url = "/login.jsp";
             } catch (SQLException ex) {
                 Logger.getLogger(RandomPassServlet.class.getName()).log(Level.SEVERE, null, ex);
+                session.setAttribute("idu", "error");
                 session.setAttribute("error", "Lỗi, vui lòng thực hiện lại!");
                 url = "/login.jsp";
             }            
             
         }else{
+            session.setAttribute("idu", "error");
             session.setAttribute("error", "Email không tồn tại!");
             url = "/login.jsp";
         }

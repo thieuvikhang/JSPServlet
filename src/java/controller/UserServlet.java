@@ -51,6 +51,9 @@ public class UserServlet extends HttpServlet {
         String url = "";
         Users users = new Users();
         HttpSession session = request.getSession();
+        session.setAttribute("idu", "");
+        session.setAttribute("error", "");
+        session.setAttribute("noti", "");
         switch (command) {
             case "insert":
                 users.setUserID(new java.util.Date().getTime());
@@ -61,6 +64,8 @@ public class UserServlet extends HttpServlet {
                 users.setUserPass(encrypt.hashmd5(request.getParameter("email").toLowerCase(), request.getParameter("password")));
                 usersDAO.insertUser(users);
                 url = "/login.jsp";
+                session.setAttribute("idu", "noti");
+                session.setAttribute("noti", "Đăng ký hoàn tất!.");
                 break;
             case "change":
                 users.setUserPass(encrypt.hashmd5(session.getAttribute("email").toString().toLowerCase(), request.getParameter("repassword")));
@@ -68,6 +73,8 @@ public class UserServlet extends HttpServlet {
                     try {
                         usersDAO.updatePass(users,session.getAttribute("id").toString());
                         session.setAttribute("user", null);
+                        session.setAttribute("idu", "noti");
+                        session.setAttribute("noti", "Đổi mật khẩu hoàn tất!.");
                     } catch (SQLException ex) {
                         Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -91,7 +98,6 @@ public class UserServlet extends HttpServlet {
                 url = "/account.jsp";
                 break;
             case "login":
-                session.setAttribute("error", "");
                 users = usersDAO.login(request.getParameter("email").toLowerCase(), encrypt.hashmd5(request.getParameter("email").toLowerCase(), request.getParameter("password")));
                 {
                     try { 
@@ -112,6 +118,7 @@ public class UserServlet extends HttpServlet {
                     url = "/index.jsp";
                     break;
                 }else{
+                    session.setAttribute("idu", "error");
                     session.setAttribute("error", "Email hoặc mật khẩu không đúng.!");
                     url = "/login.jsp";
                 }

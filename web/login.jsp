@@ -44,14 +44,23 @@
                                         <input name='utf8' type='hidden' value='true' />
                                         <input type="hidden" value="login" name="command" id="command"/>
                                         <h3 class="form-heading">Đăng nhập</h3>
-                                        <%if(session.getAttribute("error")!=null){%>
-                                        <div>
-                                            <div class="alert alert-danger alert-dismissable fade in">
-                                                <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
-                                                <strong>Thông báo!</strong> <%=session.getAttribute("error")%>
-                                            </div>
-                                        </div> 
-                                        <%}%>
+                                        <%if(session.getAttribute("error")!=null || session.getAttribute("noti")!=null)
+                                            {if(session.getAttribute("idu")=="error"){%>
+                                                <div>
+                                                <div class="alert alert-danger alert-dismissable fade in">
+                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
+                                                    <strong>Thông báo!</strong> <%=session.getAttribute("error")%>
+                                                </div>
+                                            </div> 
+                                        <% }else{%>
+                                            <div>
+                                                <div class="alert alert-success alert-dismissable fade in">
+                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
+                                                    <strong><%=session.getAttribute("noti")%></strong>
+                                                </div>
+                                            </div> 
+                                        <% }}%>
+                                        
                                         <div class="row info-input">
                                             <div class="">
                                                 <input type="email" value="" maxlength="50" placeholder="Email" name="email" required />
