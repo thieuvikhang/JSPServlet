@@ -132,9 +132,9 @@
                                                    </div>
                                         <div class="col-md-6">                                  
                                             <div class="form-group">
-                                              <label>Tên sản phẩm</label>
+                                              <label>Tên sản phẩm <span id="tenDanhMuc-result"></span></label>
                                               <input type="text"  id="tenDanhMuc" name="tenDanhMuc" required class="form-control">
-                                              <span id="tenDanhMuc-result"></span> 
+                                               
                                             </div>                                                                                                                                                   
                                             <div class="form-group">
                                                 <label>Chọn hình ảnh</label>             

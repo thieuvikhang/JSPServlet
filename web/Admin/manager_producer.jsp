@@ -75,7 +75,7 @@
                                           <td><%=image.getProducerName()%></td>
                                           <td><div class="col-sm-5 col-md-5 no-padding-l">
                                                             <div class="product-img-parent">
-                                                                <a class="product-img"><img src="${root}../images/banner/<%=image.getProducerImageBrand()%>" width="50" height="50" alt="<%=image.getProducerImageBrand()%>"></a>
+                                                                <a class="product-img"><img src="${root}../images/banner/<%=image.getProducerImageBrand()%>" width="135" height="60" alt="<%=image.getProducerImageBrand()%>"></a>
                                                             </div>
                                                         </div></td>
                                                         <td><%=image.getProducerLink()%></td>                                      

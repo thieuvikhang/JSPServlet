@@ -100,11 +100,11 @@
                                           <td>
                                               <center> 
                                                   <button <%=pqAdmin%> class="btn btn-primary btn-xs" onclick="location.href='${root}../Admin/update_product.jsp?product_id=<%=p.getProductID()%>'"><i class="glyphicon glyphicon-pencil"></i> Sửa</button>
-                                                    <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<%=p.getProductID()%>"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
+                                                    <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal2<%=p.getProductID()%>"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
                                                 </center> 
                                            </td>                                         
                                         </tr>
-                                        <div class="modal fade" id="myModal<%=p.getProductID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal fade" id="myModal2<%=p.getProductID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">
@@ -140,10 +140,9 @@
                                                           </div>
                                                           <div class="box-body">
                                                             <dl class="dl-horizontal">
-                                                              <dt>Nhà sản xuất: </dt><dd></dd>
-                                                              <dt>Loại sản phẩm: </dt><dd></dd>                                                              
-                                                              <dt>Kích thước: </dt><dd></dd>
-                                                              <dt>Trọng lương: </dt><dd></dd>
+                                                              <dt>Nhà sản xuất: </dt><dd><%=producerdao.getProducer(p.getProducerID()).getProducerName()%></dd>                                                                                                                         
+                                                              <dt>Kích thước: </dt><dd><%=p.getProductSize()%></dd>
+                                                              <dt>Trọng lương: </dt><dd><%=p.getProductWeight()%></dd>
                                                             </dl>
                                                           </div>
                                                         </div>
@@ -165,11 +164,11 @@
                                                        <div class="box box-solid"> 
                                                         <div class="box-header with-border">
                                                             <i class="fa fa-text-width"></i>
-                                                            <h3 class="box-title">Gía và số lượng</h3>
+                                                            <h3 class="box-title">Giá và số lượng</h3>
                                                           </div>
                                                           <div class="box-body">
                                                             <dl class="dl-horizontal">
-                                                              <dt>Gía bán: </dt><dd><%=formatter.format(p.getProductPrice())%></dd>
+                                                              <dt>Giá bán: </dt><dd><%=formatter.format(p.getProductPrice())%></dd>
                                                               <dt>Khuyến mãi: </dt><dd><%=p.getProductSale()%></dd>                                                              
                                                               <dt>Lượt mua: </dt><dd><%=p.getProductBuys()%></dd>
                                                               <dt>Còn lại: </dt><dd><%=p.getProductInventory()%></dd>
@@ -184,14 +183,12 @@
                                                           </div>
                                                           <div class="box-body">
                                                             <dl class="dl-horizontal">
-                                                              <dt>CPU: </dt><dd><%=p.getProductMetaTitle()%></dd>
-                                                              <dt>RAM: </dt><dd><%=p.getProductMetaKeywords()%></dd>                                                              
-                                                              <dt>Ổ cứng: </dt><dd><%=p.getProductMetaDescription()%></dd>
-                                                              <dt>Màn hình: </dt><dd><%=p.getProductMetaDescription()%></dd>
-                                                              <dt>VGA: </dt><dd><%=p.getProductMetaDescription()%></dd>
-                                                              <dt>Âm thanh: </dt><dd><%=p.getProductMetaDescription()%></dd>
-                                                              <dt>Ổ cứng: </dt><dd><%=p.getProductMetaDescription()%></dd>
-                                                              <dt>Ổ cứng: </dt><dd><%=p.getProductMetaDescription()%></dd>
+                                                              <dt>CPU: </dt><dd><%=p.getProductCpuDetail()%></dd>
+                                                              <dt>RAM: </dt><dd><%=p.getProductRamDetail()%></dd>                                                              
+                                                              <dt>Ổ cứng: </dt><dd><%=p.getProductStorageDetail()%></dd>
+                                                              <dt>Màn hình: </dt><dd><%=p.getProductScreenDetail()%></dd>
+                                                              <dt>VGA: </dt><dd><%=p.getProductVGA()%></dd>
+                                                              <dt>Âm thanh: </dt><dd><%=p.getProductSound()%></dd>                                                             
                                                             </dl>
                                                           </div>
                                                       </div>
