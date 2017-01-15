@@ -10,16 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.Users;
-import helpers.encrypt;
-import helpers.RandomPass;
+import static helpers.RandomPass.randomString;
 import helpers.Sendmail;
+import static helpers.encrypt.hashmd5;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 public class RandomPassServlet extends HttpServlet {
     UsersDAO usersDAO = new UsersDAO();
-    encrypt encrypt = new encrypt();
-    RandomPass randomPass = new RandomPass();
     Sendmail sendMail = new Sendmail();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -52,26 +50,25 @@ public class RandomPassServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
         String url = "";
-        Users users = new Users();
-        Boolean email = false;
         HttpSession session = request.getSession();
         session.setAttribute("error", "");
-        email = usersDAO.checkEmail(request.getParameter("email"));
-        if(email == true)
+         Boolean checkEmail = usersDAO.checkEmail(request.getParameter("email").toLowerCase());
+        
+        if(checkEmail == true)
         {
-            session.setAttribute("error", "Vui lòng kiểm tra Email: "+request.getParameter("email")+" !..");
-            String newPass = randomPass.randomString(6);
-            users.setUserPass(encrypt.hashmd5(session.getAttribute("email").toString().toLowerCase(), newPass));
-            {
-                try {
-                    usersDAO.updatePassbyEmail(users,session.getAttribute("email").toString().toLowerCase());
-                    session.setAttribute("user", null);
-                } catch (SQLException ex) {
-                    Logger.getLogger(RandomPassServlet.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            Sendmail.sendMail(request.getParameter("email"), "KTLaptop", "New Password: " + newPass);
-            url = "/login.jsp";
+            try {
+                session.setAttribute("error", "Vui lòng kiểm tra Email: "+request.getParameter("email")+" !..");
+                String pass = hashmd5((request.getParameter("email").toString()).toLowerCase(), randomString(6));
+                usersDAO.updatePassbyEmail(pass ,(request.getParameter("email").toString()).toLowerCase());
+                session.setAttribute("user", null);
+                Sendmail.sendMail(request.getParameter("email"), "KTLaptop", "New Password: " + randomString(6));
+                url = "/login.jsp";
+            } catch (SQLException ex) {
+                Logger.getLogger(RandomPassServlet.class.getName()).log(Level.SEVERE, null, ex);
+                session.setAttribute("error", "Lỗi, vui lòng thực hiện lại!");
+                url = "/login.jsp";
+            }            
+            
         }else{
             session.setAttribute("error", "Email không tồn tại!");
             url = "/login.jsp";

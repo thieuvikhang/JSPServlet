@@ -98,10 +98,10 @@ public class UsersDAO {
         }
     }
     //Đổi mật khẩu
-    public boolean updatePassbyEmail(Users u, String EmailID) throws SQLException {
+    public boolean updatePassbyEmail(String u, String EmailID) throws SQLException {
         try {
             Connection connection = DBConnect.getConnecttion();
-            String sql = "UPDATE users SET user_pass = '" + u.getUserPass() + "' WHERE user_email = '"+ EmailID + "'";
+            String sql = "UPDATE users SET user_pass = '" + u + "' WHERE user_email = '"+ EmailID + "'";
             PreparedStatement ps = connection.prepareCall(sql);         
             int temp = ps.executeUpdate();
             return temp == 1;
