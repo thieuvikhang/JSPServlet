@@ -1,6 +1,7 @@
-
 package controller;
-import dao.ImageDAO;
+
+import dao.AdminDAO;
+import helpers.encrypt;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,29 +12,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.Image;
+import model.Admin;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+public class InsertAdminServlet extends HttpServlet {
+    AdminDAO dao = new AdminDAO();
+    encrypt encrypt = new encrypt();
 
-public class InsertImageServlet extends HttpServlet {
-    ImageDAO dao = new ImageDAO();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AdminServlet</title>");            
+            out.println("<title>Servlet InsertAdminServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet InsertImageServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet InsertAdminServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -41,6 +45,7 @@ public class InsertImageServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         processRequest(request, response);
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -50,11 +55,12 @@ public class InsertImageServlet extends HttpServlet {
         session.setAttribute("adid", "");
         session.setAttribute("aderror", "");
         session.setAttribute("adnoti", "");
+        Long id = new java.util.Date().getTime();
         FileItemFactory file_factory = new DiskFileItemFactory(); 
         ServletFileUpload sfu = new ServletFileUpload(file_factory); 
         ArrayList<String> campos = new ArrayList<>();
         ArrayList<String> imgs = new ArrayList<>();
-        String path = getServletConfig().getServletContext().getRealPath("images/product/");
+        String path = getServletConfig().getServletContext().getRealPath("images/admin/");
         try {
             List items  = sfu.parseRequest(request);
             for (int i = 0; i < items.size(); i++) { 
@@ -67,18 +73,19 @@ public class InsertImageServlet extends HttpServlet {
                 } else {
                     campos.add(item.getString("UTF-8"));
                 }
-            }
-            
-            dao.insert(new Image(campos.get(0), imgs.get(0), Long.parseLong(campos.get(1))));     
+            }            
+            dao.insertAdmin(new Admin(id,campos.get(0), imgs.get(0),campos.get(1),encrypt.hashmd5(campos.get(1).toLowerCase(),campos.get(2)), Long.parseLong(campos.get(3))));     
         } catch (Exception e) {
         }
         session.setAttribute("adid", "noti");
         session.setAttribute("adnoti", "Thêm thành công!.");
-        getServletContext().getRequestDispatcher("/Admin/manager_image.jsp").forward(
+        getServletContext().getRequestDispatcher("/Admin/manager_admin.jsp").forward(
                 request, response);
     }
+
     @Override
     public String getServletInfo() {
         return "Short description";
-    }
+    }// </editor-fold>
+
 }

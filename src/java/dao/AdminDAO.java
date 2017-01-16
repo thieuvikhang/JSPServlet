@@ -12,7 +12,7 @@ public class AdminDAO {
     // phương thức thêm tài khoản
     public boolean insertAdmin(Admin a) {
         Connection connection = DBConnect.getConnecttion();
-        String sql = "INSERT INTO admin VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO admin(`admin_id`, `admin_fullname`, `admin_avatar`, `admin_email`, `admin_pass`, `pq_id`) VALUE(?,?,?,?,?,?)";
         try {
             PreparedStatement ps = connection.prepareCall(sql);
             ps.setLong(1, a.getAdminID());
@@ -150,5 +150,17 @@ public class AdminDAO {
         return false;
         }
     }
+        public static void main(String[] args) throws SQLException 
+    {       
+        AdminDAO dao = new AdminDAO();
+        Admin admin = new Admin();
+        admin.setAdminID(56);   
+        admin.setAdminfullName("hgfds");
+        admin.setAdminAvatar("hgfds"); 
+        admin.setAdminEmail("jhgfd"); 
+        admin.setAdminPass("546"); 
+        admin.setPqID(1);
+        dao.insertAdmin(admin);
+    } 
     
 }

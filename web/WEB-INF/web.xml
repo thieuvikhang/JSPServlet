@@ -104,6 +104,10 @@
         <servlet-name>RandomPassServlet</servlet-name>
         <servlet-class>controller.RandomPassServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InsertAdminServlet</servlet-name>
+        <servlet-class>controller.InsertAdminServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CheckEmailServlet</servlet-name>
         <url-pattern>/CheckEmailServlet</url-pattern>
@@ -207,6 +211,10 @@
     <servlet-mapping>
         <servlet-name>RandomPassServlet</servlet-name>
         <url-pattern>/RandomPassServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InsertAdminServlet</servlet-name>
+        <url-pattern>/InsertAdminServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -86,9 +86,8 @@
                               </div>
                               <!-- /.box-header -->
                               <!-- form start -->
-                              <form class="form-horizontal" action="../AdminServlet" method="POST">
+                              <form class="form-horizontal" action="../InsertAdminServlet" method="POST" enctype="multipart/form-data">
                                 <div class="box-body">
-                                  <input type="hidden" name="command" value="insert">
                                   <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Tên Admin</label>
 
@@ -98,7 +97,7 @@
                                         <span id="tenDanhMuc-result"></span> 
                                     </div>
                                   </div>
-                                     <div class="form-group">
+                                  <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Chọn hình ảnh</label>
 
                                     <div class="col-sm-10">
@@ -113,7 +112,7 @@
                                       <input type="text" name="email" value="" class="form-control" id="inputEmail3" placeholder="Email">
                                     </div>
                                   </div>
-                                    <div class="form-group">
+                                  <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
 
                                     <div class="col-sm-10">

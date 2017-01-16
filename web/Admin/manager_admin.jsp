@@ -93,7 +93,7 @@
                                           <td>
                                               <div class="col-sm-5 col-md-5 no-padding-l">
                                                 <div class="product-img-parent">
-                                                    <a href="#" class="product-img"><img src="${root}../Admin/images/admin/<%=admin.getAdminAvatar()%>" width="50" height="50" alt="<%=admin.getAdminfullName()%>"></a>
+                                                    <a href="#" class="product-img"><img src="../images/admin/<%=admin.getAdminAvatar()%>" width="50" height="50" alt="<%=admin.getAdminfullName()%>"></a>
                                                 </div>
                                               </div>
                                           </td>
