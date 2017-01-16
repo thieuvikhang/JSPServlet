@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Category;
 public class ManagerCategoryServlet extends HttpServlet {
     CategoryDAO categoryDAO = new CategoryDAO();
@@ -23,11 +24,17 @@ public class ManagerCategoryServlet extends HttpServlet {
         String command = request.getParameter("command");
         String category_id = request.getParameter("category_id");
         String url = "";
+        HttpSession session = request.getSession();
+        session.setAttribute("adid", "");
+        session.setAttribute("aderror", "");
+        session.setAttribute("adnoti", "");
         try {
             switch (command) {
                 case "delete":
                     categoryDAO.delete(Long.parseLong(category_id));
                     url = "/Admin/manager_category.jsp";
+                    session.setAttribute("adid", "noti");
+                    session.setAttribute("adnoti", "Xóa danh mục thành công!.");
                     break;
             }
         } catch (Exception e) {
@@ -47,6 +54,10 @@ public class ManagerCategoryServlet extends HttpServlet {
         String mk = request.getParameter("mk");
         String md = request.getParameter("md");
         String url = "", error = "";
+        HttpSession session = request.getSession();
+        session.setAttribute("adid", "");
+        session.setAttribute("aderror", "");
+        session.setAttribute("adnoti", "");
         if (tenDanhMuc.equals("")) {
             error = "Vui lòng nhập tên danh mục!";
             request.setAttribute("error", error);
@@ -57,10 +68,14 @@ public class ManagerCategoryServlet extends HttpServlet {
                     case "insert":
                         categoryDAO.insert(new Category(new Date().getTime()%1000, tenDanhMuc, mt, mk, md));
                         url = "/Admin/manager_category.jsp";
+                        session.setAttribute("adid", "noti");
+                        session.setAttribute("adnoti", "Thêm danh mục thành công!.");
                         break;
                     case "update":
                         categoryDAO.update(new Category(Long.parseLong(request.getParameter("category_id")),tenDanhMuc, mt, mk, md));
                         url = "/Admin/manager_category.jsp";
+                        session.setAttribute("adid", "noti");
+                        session.setAttribute("adnoti", "Sửa danh mục thành công!.");
                         break;
                 }
             } else {

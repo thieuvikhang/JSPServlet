@@ -77,7 +77,7 @@ public class AdminServlet extends HttpServlet {
                 admin.setPqID(Integer.parseInt(request.getParameter("pq")));
                 adminDAO.insertAdmin(admin);
                 session.setAttribute("adid", "noti");
-                session.setAttribute("adnoti", "Thêm sản phẩm thành công!.");
+                session.setAttribute("adnoti", "Thêm Admin thành công!.");
                 url = "/Admin/manager_admin.jsp";
                 break;
             case "update":
@@ -91,7 +91,7 @@ public class AdminServlet extends HttpServlet {
                     try {
                         adminDAO.updateAdmin(admin);
                         session.setAttribute("adid", "noti");
-                        session.setAttribute("adnoti", "Sửa sản phẩm thành công!.");
+                        session.setAttribute("adnoti", "Sửa Admin thành công!.");
                     } catch (SQLException ex) {
                         Logger.getLogger(AdminServlet.class.getName()).log(Level.SEVERE, null, ex);
                     }

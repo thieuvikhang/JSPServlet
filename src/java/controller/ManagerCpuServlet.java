@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Cpu;
 public class ManagerCpuServlet extends HttpServlet {
     CpuDAO dao = new CpuDAO();
@@ -22,11 +23,17 @@ public class ManagerCpuServlet extends HttpServlet {
         String command = request.getParameter("command");
         String cpu_id = request.getParameter("cpu_id");
         String url = "";
+        HttpSession session = request.getSession();
+        session.setAttribute("adid", "");
+        session.setAttribute("aderror", "");
+        session.setAttribute("adnoti", "");
         try {
             switch (command) {
                 case "delete":
                     dao.delete(Long.parseLong(cpu_id));
                     url = "/Admin/manager_cpu.jsp";
+                    session.setAttribute("adid", "noti");
+                    session.setAttribute("adnoti", "Xóa CPU thành công!.");
                     break;
             }
         } catch (Exception e) {

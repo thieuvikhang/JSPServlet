@@ -142,7 +142,12 @@
             <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Các đơn hàng chưa giao</h3>
-
+              <%if(session.getAttribute("adid")=="noti"){%>
+                   <div class="alert alert-success alert-dismissible fade in" id="myAlert">
+                       <a href="#" class="close">&times;</a>
+                       <strong><%=session.getAttribute("adnoti")%></strong>
+                   </div>    
+               <% }%>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
@@ -280,5 +285,25 @@
 		});
 	});
 	</script>
+        <script>
+            $(document).ready(function(){
+                $(".close").click(function(){
+                   $("#myAlert").alert("close");
+                   <%
+                        session.setAttribute("adid", "");
+                        session.setAttribute("aderror", "");
+                        session.setAttribute("adnoti", "");
+                   %>
+                });
+            setTimeout(function(){
+                $("#myAlert").alert("close");
+                <%
+                    session.setAttribute("adid", "");
+                    session.setAttribute("aderror", "");
+                    session.setAttribute("adnoti", "");
+                %>
+            }, 6000);            
+        });
+        </script>
     </body>  
 </html>

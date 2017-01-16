@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -44,12 +45,18 @@ public class DelImageServlet extends HttpServlet {
             throws ServletException, IOException {
         String category_id = request.getParameter("image_id");
         String url = null;
+        HttpSession session = request.getSession();
+        session.setAttribute("adid", "");
+        session.setAttribute("aderror", "");
+        session.setAttribute("adnoti", "");
         try {
             dao.delete(Long.parseLong(category_id));
             url="/Admin/manager_image.jsp";
         } catch (SQLException ex) {
             Logger.getLogger(DelImageServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+        session.setAttribute("adid", "noti");
+        session.setAttribute("adnoti", "Xóa thành công!.");
         RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
         rd.forward(request, response);
         processRequest(request, response);
@@ -60,11 +67,6 @@ public class DelImageServlet extends HttpServlet {
         processRequest(request, response);               
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";

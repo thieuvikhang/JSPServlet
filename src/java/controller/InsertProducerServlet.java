@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Producer;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
@@ -31,6 +32,10 @@ public class InsertProducerServlet extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
+        HttpSession session = request.getSession();
+        session.setAttribute("adid", "");
+        session.setAttribute("aderror", "");
+        session.setAttribute("adnoti", "");
         FileItemFactory file_factory = new DiskFileItemFactory(); 
         ServletFileUpload sfu = new ServletFileUpload(file_factory); 
         ArrayList<String> campos = new ArrayList<>();
@@ -52,6 +57,8 @@ public class InsertProducerServlet extends HttpServlet {
             dao.insert(new Producer(campos.get(0), imgs.get(0), campos.get(1)));     
         } catch (Exception e) {
         }
+        session.setAttribute("adid", "noti");
+        session.setAttribute("adnoti", "Thêm nhà sản xuất thành công!.");
         getServletContext().getRequestDispatcher("/Admin/manager_producer.jsp").forward(
                 request, response);
     }

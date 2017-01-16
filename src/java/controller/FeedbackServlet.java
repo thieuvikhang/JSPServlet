@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Feedback;
 
 /**
@@ -46,16 +47,24 @@ public class FeedbackServlet extends HttpServlet {
         response.setCharacterEncoding("utf-8");
         String command = request.getParameter("command");
         String feedback_id = request.getParameter("feedback_id");
+        HttpSession session = request.getSession();
+        session.setAttribute("adid", "");        
+        session.setAttribute("adnoti", "");
+        session.setAttribute("aderror", "");
         String url = "";
         try {
             switch (command) {
                 case "delete":
                     feedbackDAO.delete(Long.parseLong(feedback_id));
                     url = "/Admin/feedback.jsp";
+                    session.setAttribute("adid", "noti");        
+                    session.setAttribute("adnoti", "Đã xóa góp ý thành công!..");
                     break;
                 case "finish":
                     feedbackDAO.finish(Long.parseLong(feedback_id));
                     url = "/Admin/feedback.jsp";
+                    session.setAttribute("adid", "noti");        
+                    session.setAttribute("adnoti", "Đã hoàn tất góp ý!");
                     break; 
             }
         } catch (Exception e) {

@@ -52,7 +52,12 @@
                                  <div class="box">
                                    <div class="box-header">
                                      <h3 class="box-title">Bảng nhà sản xuất</h3>                                     
-                                     
+                                    <%if(session.getAttribute("adid")=="noti"){%>
+                                        <div class="alert alert-success alert-dismissible fade in" id="myAlert">
+                                            <a href="#" class="close">&times;</a>
+                                            <strong><%=session.getAttribute("adnoti")%></strong>
+                                        </div>    
+                                    <% }%>
                                    </div>
                                    <!-- /.box-header -->
                                    <div class="box-body">
@@ -168,5 +173,25 @@
 		});
 	});
 	</script>
+        <script>
+            $(document).ready(function(){
+                $(".close").click(function(){
+                   $("#myAlert").alert("close");
+                   <%
+                        session.setAttribute("adid", "");
+                        session.setAttribute("aderror", "");
+                        session.setAttribute("adnoti", "");
+                   %>
+                });
+            setTimeout(function(){
+                $("#myAlert").alert("close");
+                <%
+                    session.setAttribute("adid", "");
+                    session.setAttribute("aderror", "");
+                    session.setAttribute("adnoti", "");
+                %>
+            }, 6000);            
+        });
+        </script>
     </body>
 </html>

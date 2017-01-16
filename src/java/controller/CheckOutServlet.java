@@ -89,7 +89,7 @@ public class CheckOutServlet extends HttpServlet {
             session.setAttribute("cart", cart);
         } catch (Exception e) {
         }
-        response.sendRedirect("/index.jsp");
+        response.sendRedirect("/account.jsp");
         processRequest(request, response);
     }
 

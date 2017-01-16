@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Product;
 import java.util.Date;
+import javax.servlet.http.HttpSession;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -33,6 +34,10 @@ public class InsertProductServlet extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
+        HttpSession session = request.getSession();
+        session.setAttribute("adid", "");
+        session.setAttribute("aderror", "");
+        session.setAttribute("adnoti", "");
         java.util.Date date = new Date();
         Timestamp timestamp = new Timestamp(date.getTime());
         FileItemFactory file_factory = new DiskFileItemFactory(); 
@@ -56,6 +61,8 @@ public class InsertProductServlet extends HttpServlet {
             dao.insert(new Product(campos.get(0), campos.get(1), imgs.get(0), campos.get(2), campos.get(3), campos.get(4), campos.get(5), campos.get(6), campos.get(7), campos.get(8), campos.get(9), campos.get(10), campos.get(11), campos.get(12), campos.get(13), campos.get(14), campos.get(15), campos.get(16), campos.get(17), campos.get(18), campos.get(19), campos.get(20), campos.get(21), Integer.parseInt(campos.get(22)), Integer.parseInt(campos.get(23)), Integer.parseInt(campos.get(24)), timestamp, Integer.parseInt(campos.get(25)), Integer.parseInt(campos.get(26)), Long.parseLong(campos.get(27)), Long.parseLong(campos.get(28)), Long.parseLong(campos.get(29)), Long.parseLong(campos.get(30)), Long.parseLong(campos.get(31)), Long.parseLong(campos.get(32)), Long.parseLong(campos.get(33))));
         } catch (Exception e) {
         }
+        session.setAttribute("adid", "noti");
+        session.setAttribute("adnoti", "Thêm sản phẩm thành công!.");
         response.sendRedirect("/Admin/manager_product.jsp");
     }
     @Override
