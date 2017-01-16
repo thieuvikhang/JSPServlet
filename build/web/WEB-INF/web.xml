@@ -108,6 +108,10 @@
         <servlet-name>InsertAdminServlet</servlet-name>
         <servlet-class>controller.InsertAdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateAdminServlet</servlet-name>
+        <servlet-class>controller.UpdateAdminServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CheckEmailServlet</servlet-name>
         <url-pattern>/CheckEmailServlet</url-pattern>
@@ -215,6 +219,10 @@
     <servlet-mapping>
         <servlet-name>InsertAdminServlet</servlet-name>
         <url-pattern>/InsertAdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateAdminServlet</servlet-name>
+        <url-pattern>/UpdateAdminServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
