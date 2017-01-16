@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/src/java/controller/InsertImageServlet.java</file>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/web/Admin/insert_admin.jsp</file>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/web/Admin/update_admin.jsp</file>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/web/Admin/insert_image.jsp</file>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/src/java/controller/AdminServlet.java</file>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/src/java/dao/AdminDAO.java</file>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/src/java/dao/ImageDAO.java</file>
-            <file>file:/C:/Users/Toan/Desktop/JSPServlet/src/java/controller/InsertAdminServlet.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
