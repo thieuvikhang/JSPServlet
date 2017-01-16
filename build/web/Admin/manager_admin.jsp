@@ -30,6 +30,7 @@
         <c:set var="root" value="${pageContext.request.contextPath}"/>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="stylesheet" href="${root}/Admin/layout/bootstrap/css/bootstrap.min.css">
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="${root}/Admin/layout/plugins/datatables/dataTables.bootstrap.css">
@@ -63,12 +64,12 @@
                                    <div class="box-header">
                                      <h3 class="box-title">Bảng danh mục sản phẩm</h3>                                    
                                      <%if(session.getAttribute("adid")=="noti"){%>
-                                        <div class="alert alert-info alert-dismissable fade in">
-                                            <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
+                                        <div class="alert alert-success alert-dismissible fade in" id="myAlert">
+                                            <a href="#" class="close">&times;</a>
                                             <strong><%=session.getAttribute("adnoti")%></strong>
                                         </div>    
                                       <% }%>
-                                   </div>
+                                   </div>                                   
                                    <!-- /.box-header -->
                                    <div class="box-body">
                                      <table id="example1" class="table table-bordered table-striped display" cellspacing="0" width="100%">
@@ -136,6 +137,8 @@
         </div>
             <script src="${root}/Admin/layout/plugins/jQuery/jquery-2.2.3.min.js"></script>
             <script src="${root}/Admin/layout/bootstrap/js/bootstrap.min.js"></script>
+<!--            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
             <script src="${root}/Admin/layout/plugins/datatables/jquery.dataTables.min.js"></script>
             <script src="${root}/Admin/layout/plugins/datatables/dataTables.bootstrap.min.js"></script>
             <script src="${root}/Admin/layout/plugins/slimScroll/jquery.slimscroll.min.js"></script>
@@ -174,5 +177,25 @@
 		});
 	});
 	</script>
+        <script>
+            $(document).ready(function(){
+                $(".close").click(function(){
+                   $("#myAlert").alert("close");
+                   <%
+                        session.setAttribute("adid", "");
+                        session.setAttribute("aderror", "");
+                        session.setAttribute("adnoti", "");
+                   %>
+                });
+            setTimeout(function(){
+                $("#myAlert").alert("close");
+                <%
+                    session.setAttribute("adid", "");
+                    session.setAttribute("aderror", "");
+                    session.setAttribute("adnoti", "");
+                %>
+            }, 6000);            
+        });
+        </script>
     </body>
 </html>

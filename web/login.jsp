@@ -44,23 +44,19 @@
                                         <input name='utf8' type='hidden' value='true' />
                                         <input type="hidden" value="login" name="command" id="command"/>
                                         <h3 class="form-heading">Đăng nhập</h3>
-                                        <%if(session.getAttribute("error")!=null && session.getAttribute("noti")!=null)
-                                            {if(session.getAttribute("idu")=="error"){%>
-                                                <div>
-                                                <div class="alert alert-danger alert-dismissable fade in">
-                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
-                                                    <strong>Thông báo!</strong> <%=session.getAttribute("error")%>
-                                                </div>
-                                            </div> 
-                                        <% }else{%>
-                                            <div>
-                                                <div class="alert alert-success alert-dismissable fade in">
-                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close"> × </a>
-                                                    <strong><%=session.getAttribute("noti")%></strong>
-                                                </div>
-                                            </div> 
-                                        <% }}%>
-                                        
+
+                                        <%if(session.getAttribute("idu")=="error"){%>
+                                            <div class="alert alert-danger alert-dismissible fade in" id="myAlert">
+                                                <a href="#" class="close">&times;</a>
+                                                <strong>Thông báo!</strong> <%=session.getAttribute("error")%>
+                                            </div>
+                                        <% }%>
+                                        <%if(session.getAttribute("idu")=="noti"){%>
+                                            <div class="alert alert-success alert-dismissible fade in" id="myAlert">
+                                                <a href="#" class="close">&times;</a>
+                                                <strong><%=session.getAttribute("noti")%></strong>
+                                            </div>
+                                        <% }%>
                                         <div class="row info-input">
                                             <div class="">
                                                 <input type="email" value="" maxlength="50" placeholder="Email" name="email" required />
@@ -130,5 +126,25 @@
         <!-- /SITE FOOTER -->
     </div>
     <jsp:include page = "layout/script.jsp"></jsp:include>
+    <script>
+            $(document).ready(function(){
+                $(".close").click(function(){
+                   $("#myAlert").alert("close");
+                   <%
+                        session.setAttribute("idu", "");
+                        session.setAttribute("error", "");
+                        session.setAttribute("noti", "");
+                   %>
+                });
+            setTimeout(function(){
+                $("#myAlert").alert("close");
+                <%
+                    session.setAttribute("idu", "");
+                    session.setAttribute("error", "");
+                    session.setAttribute("noti", "");
+                %>
+            }, 6000);            
+        });
+        </script>
     </body>
 </html>
