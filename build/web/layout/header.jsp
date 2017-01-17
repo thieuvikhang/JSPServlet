@@ -127,7 +127,7 @@
                                                         <img src="../images/product/<%=list.getValue().getProduct().getProductImage()%>">
                                                         </div><div class="col-md-14 cart-right">
                                                         <div class="cart-title">
-                                                        <a href="detail.jsp?product=<%=list.getValue().getProduct().getProductID()%>"><%=list.getValue().getProduct().getProductName()%></a>
+                                                        <a href="..product/<%=list.getValue().getProduct().getProductID()%>"><%=list.getValue().getProduct().getProductName()%></a>
                                                         </div><div class="cart-price">
                                                             <i style="color:#898989;font-style: normal;"><%=list.getValue().getQuantity()%> x </i><%=formatter.format(list.getValue().getProduct().getProductPriceReal())%>₫</div>
                                                         </div>
@@ -179,7 +179,7 @@
                                             <li class="fali"><a href="/" title="Trang chủ">Trang chủ</a></li>
                                             <li class="fali"><a href="../gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                                             <li class="dropdown yamm-fw">
-                                                <a class="a_medr1" href="/ta-ca-san-pham/pages-1">Sản phẩm</a><a href="/collections/all" data-toggle="dropdown" class="clickshowarrow a_medr2" title="Sản phẩm"><i class="fa fa-angle-down"></i></a>
+                                                <a class="a_medr1" href="../ta-ca-san-pham/pages-1">Sản phẩm</a><a href="/collections/all" data-toggle="dropdown" class="clickshowarrow a_medr2" title="Sản phẩm"><i class="fa fa-angle-down"></i></a>
                                                 <div class="arrow"></div>
                                                 <ul class="dropdown-menu dropdown-menu-right col-md-12 homemenudropdown">
                                                     <div class="container">
@@ -245,7 +245,7 @@
                                                 <%for (Map.Entry<Long, Item> list : cart.getCartItems().entrySet()) {%>
                                                 <div class="control-container">
                                                     <div class="row">
-                                                    <a class="cart-close" title="Xóa" href="CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>" onclick="Bizweb.removeItem(2022657)">
+                                                    <a class="cart-close" title="Xóa" href="../CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>" onclick="Bizweb.removeItem(2022657)">
                                                         <img class="item-remove" src="../images/shop/itemclose.png">
                                                     </a>
                                                     <div class="col-md-10 cart-left">
@@ -253,7 +253,7 @@
                                                     </div>
                                                     <div class="col-md-14 cart-right">
                                                         <div class="cart-title">
-                                                            <a href="detail.jsp?product=<%=list.getValue().getProduct().getProductID()%>"><%=list.getValue().getProduct().getProductName()%></a>
+                                                            <a href="../product/<%=list.getValue().getProduct().getProductID()%>"><%=list.getValue().getProduct().getProductName()%></a>
                                                         </div>
                                                         <div class="cart-price">
                                                             <i style="color:#898989;font-style: normal;"><%=list.getValue().getQuantity()%> x </i><%=formatter.format(list.getValue().getProduct().getProductPriceReal())%>₫</div>
@@ -266,8 +266,8 @@
                                                         <i style="color:#898989;font-style: normal;">TỔNG TIỀN:</i> <%=formatter.format(cart.total())%>₫
                                                     </span>
                                                 </div>
-                                                <div class="action"><a id="gocart" href="/cart.jsp">Giỏ hàng</a></div>
-                                                <div class="action"><a id="gocart" href="/checkout.jsp">Thanh toán</a></div>
+                                                <div class="action"><a id="gocart" href="../gio-hang">Giỏ hàng</a></div>
+                                                <div class="action"><a id="gocart" href="../xac-nhan">Thanh toán</a></div>
                                                 </div>
                                             </div>
                                         </div>

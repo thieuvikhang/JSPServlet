@@ -84,7 +84,7 @@
                                     {
                                     %>
                                     <li>
-                                        <a href="product.jsp?producer=<%=product.getProducerID()%>&pages=1" title="<%=c.getProducerName()%>"><%=c.getProducerName()%></a>
+                                        <a href="../product.jsp?producer=<%=product.getProducerID()%>&pages=1" title="<%=c.getProducerName()%>"><%=c.getProducerName()%></a>
                                     </li>
                                     <%}
                                     %>
@@ -176,7 +176,7 @@
                                             <div class="col-sm-12 no-padding-lr quantity_cartbtn ">
                                                 <div class="product_cart_btn">
                                                     <button class="product-action btn-red addtocart add-to-cart btn btn-default btn-lg" type="submit" id="button-cart">MUA NGAY</button>
-
+<!--                                                    <a class="product-action btn-red addtocart add-to-cart btn btn-default"  type="submit" href="../CartServlet?command=plus&productID=<%=product.getProductID()%>">MUA NGAY</a>-->
                                                 </div>
                                             </div>
                                         </div>

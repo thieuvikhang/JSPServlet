@@ -31,9 +31,38 @@ public class CartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+                HttpSession session = request.getSession();
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
-        doPost(request, response);
+        String command = request.getParameter("command");
+        String productID = request.getParameter("productID");
+        Cart cart = (Cart) session.getAttribute("cart");
+        try {
+            Long idProduct = Long.parseLong(productID);
+            Product product = productDAO.getProduct(idProduct);
+            switch (command) {
+                case "plus":
+                    if (cart.getCartItems().containsKey(idProduct)) {
+                        cart.plusToCart(idProduct, 
+                                new Item(product,cart.getCartItems().get(idProduct).getQuantity()));
+                    } else {
+                        cart.plusToCart(idProduct, new Item(product, 1));
+                    }
+                    break;
+                case "remove":
+                    cart.removeToCart(idProduct);
+                    break;
+                case "delete":
+                    cart = new Cart();
+                    session.setAttribute("cart", cart);
+                    break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.sendRedirect("/index.jsp");
+        }
+        session.setAttribute("cart", cart);
+        response.sendRedirect("/index.jsp");
         processRequest(request, response);
     }
     @Override
