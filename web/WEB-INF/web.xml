@@ -112,6 +112,14 @@
         <servlet-name>UpdateAdminServlet</servlet-name>
         <servlet-class>controller.UpdateAdminServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CancelServlet</servlet-name>
+        <servlet-class>controller.CancelServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SuccessServlet</servlet-name>
+        <servlet-class>controller.SuccessServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CheckEmailServlet</servlet-name>
         <url-pattern>/CheckEmailServlet</url-pattern>
@@ -223,6 +231,14 @@
     <servlet-mapping>
         <servlet-name>UpdateAdminServlet</servlet-name>
         <url-pattern>/UpdateAdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CancelServlet</servlet-name>
+        <url-pattern>/CancelServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SuccessServlet</servlet-name>
+        <url-pattern>/SuccessServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
