@@ -111,9 +111,9 @@
                         <div class="row">
                             <div class="product-detail" itemscope itemtype="http://schema.org/Product">
 <!--                                <meta itemprop="url" content="//ranger-theme.bizwebvietnam.net/sopha-giuong-co-dien">-->
-                                <meta itemprop="image" content="./images/product/<%=product.getProductImage()%>">
+                                <meta itemprop="image" content="../images/product/<%=product.getProductImage()%>">
                                 <meta itemprop="shop-currency" content="VND">
-                                <form action="CartServlet?command=plus&productID=<%=product.getProductID()%>" method="post" class="product_form_class">
+                                <form action="../CartServlet?command=plus&productID=<%=product.getProductID()%>" method="post" class="product_form_class">
                                     <div class="product-detail-left col-md-6">
                                         <div class="popup-gallery">
                                             <div class="row">
@@ -125,8 +125,8 @@
                                                             {
                                                             %>
                                                             <li>
-                                                                <a href="./images/product/<%=image.getImageImage()%>" data-image="./images/product/<%=image.getImageImage()%>" data-zoom-image="./images/product/<%=image.getImageImage()%>">
-                                                                    <img src="./images/product/<%=image.getImageImage()%>" title="<%=image.getImageAlt()%>"
+                                                                <a href="../images/product/<%=image.getImageImage()%>" data-image="../images/product/<%=image.getImageImage()%>" data-zoom-image="../images/product/<%=image.getImageImage()%>">
+                                                                    <img src="../images/product/<%=image.getImageImage()%>" title="<%=image.getImageAlt()%>"
                                                                          alt="<%=image.getImageAlt()%>" />
                                                                 </a>
                                                             </li>
@@ -145,8 +145,8 @@
                                                 </div>
                                                 <div class="col-xs-10">
                                                     <div class="product-image inner-cloud-zoom">
-                                                        <a href="./images/product/<%=product.getProductImage()%>" title="" id="ex1">
-                                                            <img src="./images/product/<%=product.getProductImage()%>" alt="" id="image" data-zoom-image="./images/product/<%=product.getProductImage()%>"
+                                                        <a href="../images/product/<%=product.getProductImage()%>" title="" id="ex1">
+                                                            <img src="../images/product/<%=product.getProductImage()%>" alt="" id="image" data-zoom-image="../images/product/<%=product.getProductImage()%>"
                                                                  alt="<%=product.getProductName()%>" />
                                                         </a>
                                                     </div>
@@ -205,7 +205,7 @@
                                             <div role="tabpanel" class="tab-pane active" id="product_top_detail">
                                                 <p style="color: rgb(0, 0, 0); font-family: Arial, Verdana, sans-serif; font-size: 14px; line-height: normal;"><%=product.getProductContent()%></p>
                                                 <!--<p style="color: rgb(0, 0, 0); font-family: Arial, Verdana, sans-serif; font-size: 14px; line-height: normal;">Tab 1</p>
-                                                <p style="color: rgb(0, 0, 0); font-family: Arial, Verdana, sans-serif; font-size: 14px; line-height: normal; text-align: center;"><img src="./images/product/<%=product.getProductImage()%>" /></p> -->
+                                                <p style="color: rgb(0, 0, 0); font-family: Arial, Verdana, sans-serif; font-size: 14px; line-height: normal; text-align: center;"><img src="../images/product/<%=product.getProductImage()%>" /></p> -->
                                             </div>
                                             <div role="tabpanel" class="tab-pane" id="product_info">  
                                                 <table width="100%" class="table table-hover">
@@ -393,19 +393,19 @@
                                         <div class="item">
                                             <div class="col-md-12">
                                                 <div class="product_item">
-                                                    <form action="CartServlet?command=plus&productID=<%=p.getProductID()%>" class="product_item_form" method="post">
+                                                    <form action="../CartServlet?command=plus&productID=<%=p.getProductID()%>" class="product_item_form" method="post">
                                                         <div class="product-gird">
                                                             <div class="product-img-parent">
                                                                 <% if(p.getProductSale() > 0 ){ %>
                                                                 <div class="sale_tag">- <%=p.getProductSale()%>%</div>
                                                                 <% }%>
-                                                                <a class="product-img" href="detail.jsp?product=<%=p.getProductID()%>" title="<%=p.getProductName()%>">
-                                                                    <img class="product-img-first" src="./images/product/<%=p.getProductImage()%>" alt="<%=p.getProductName()%>">
+                                                                <a class="product-img" href="../product/<%=p.getProductID()%>" title="<%=p.getProductName()%>">
+                                                                    <img class="product-img-first" src="../images/product/<%=p.getProductImage()%>" alt="<%=p.getProductName()%>">
                                                                 </a>
                                                                 <div class="product-action-btn">
                                                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <a class="btn btn-default btn-lg addtocart" href="CartServlet?command=plus&productID=<%=p.getProductID()%>">CHỌN SẢN PHẨM</a>
-                                                                        <a href="detail.jsp?product=<%=p.getProductID()%>" class="btn btn-default btn-black btn-lg">CHI TIẾT</a>
+                                                                        <a class="btn btn-default btn-lg addtocart" href="../CartServlet?command=plus&productID=<%=p.getProductID()%>">CHỌN SẢN PHẨM</a>
+                                                                        <a href="../product/<%=p.getProductID()%>" class="btn btn-default btn-black btn-lg">CHI TIẾT</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -415,7 +415,7 @@
                                                                 <del><%=formatter.format(p.getProductPrice())%></del>
                                                                 <% }%>
                                                             </span>
-                                                            <h3 class="product-name"><a href="detail.jsp?product=<%=p.getProductID()%>" title="<%=p.getProductName()%>"><%=p.getProductName()%></a></h3>
+                                                            <h3 class="product-name"><a href="../product/<%=p.getProductID()%>" title="<%=p.getProductName()%>"><%=p.getProductName()%></a></h3>
                                                             <div style="display:none">
                                                                 <select id="product-selectors" name="variantId" style="display:none">
                                                                     <option lỗi liquid unknown operator roduct value="2111409">Ghi - <%=formatter.format(p.getProductPrice())%></option>

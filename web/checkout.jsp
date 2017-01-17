@@ -47,7 +47,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div id="login" class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-style form-login">
-                                    <form accept-charset='UTF-8' action="CheckOutServlet" method="POST">
+                                    <form accept-charset='UTF-8' action="../CheckOutServlet" method="POST">
                                         <input name='FormType' type='hidden' value='customer_login' />
                                         <input name='utf8' type='hidden' value='true' />
                                         <input type="hidden" value="login" name="command" id="command"/>

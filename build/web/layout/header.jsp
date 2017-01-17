@@ -55,13 +55,13 @@
                                 <div class="pull-right">
                                     <% if(session.getAttribute("user") == null) {%>
                                     <ul>
-                                        <li><a href="./register.jsp" class="header-link" title="Đăng ký">Đăng ký</a></li>
-                                        <li><a href="./login.jsp" class="header-link" title="Đăng nhập">Đăng nhập</a></li>
+                                        <li><a href="../dang-ky" class="header-link" title="Đăng ký">Đăng ký</a></li>
+                                        <li><a href="../dang-nhap" class="header-link" title="Đăng nhập">Đăng nhập</a></li>
                                     </ul>
                                     <%} else {%>
                                     <ul>																	
-					<li><a href="./account.jsp" class="header-link" title="Xin chào! "><%=session.getAttribute("name")%></a></li>
-                                        <li><a href="LogOutServlet" class="header-link" title="Thoát">Thoát</a></li>													
+					<li><a href="../tai-khoang" class="header-link" title="Xin chào! "><%=session.getAttribute("name")%></a></li>
+                                        <li><a href="../LogOutServlet" class="header-link" title="Thoát">Thoát</a></li>													
                                     </ul>
                                     <%}%>
                                 </div>
@@ -78,7 +78,7 @@
                             <div class="col-sm-6 col-md-3 logo">
                                 <div class="logo_content">
                                     <a href="/" class="logo" title="KTLaptop">
-                                        <img src="./images/shop/logo2.png" alt="KTLaptop">
+                                        <img src="../images/shop/logo2.png" alt="KTLaptop">
                                     </a>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                     </li>
                                     <li class="cart dropdown">
                                         <a href="#" class="a_hv_cart_dropdown" id="dLabel1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="./images/shop/cart.png" alt="CART">
+                                            <img src="../images/shop/cart.png" alt="CART">
                                             <span class="cart-number"><%=cart.countItem()%></span>
                                         </a>
                                         <%if(cart.countItem()==0){%>
@@ -120,11 +120,11 @@
                                                 <%for (Map.Entry<Long, Item> list : cart.getCartItems().entrySet()) {%>
                                                 <div class="control-container">
                                                     <div class="row">
-                                                    <a class="cart-close" title="Xóa" href="CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>" onclick="Bizweb.removeItem(2022657)">
-                                                        <img class="item-remove" src="./images/shop/itemclose.png">
+                                                    <a class="cart-close" title="Xóa" href="../CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>" onclick="Bizweb.removeItem(2022657)">
+                                                        <img class="item-remove" src="../images/shop/itemclose.png">
                                                         </a>
                                                     <div class="col-md-10 cart-left">
-                                                        <img src="./images/product/<%=list.getValue().getProduct().getProductImage()%>">
+                                                        <img src="../images/product/<%=list.getValue().getProduct().getProductImage()%>">
                                                         </div><div class="col-md-14 cart-right">
                                                         <div class="cart-title">
                                                         <a href="detail.jsp?product=<%=list.getValue().getProduct().getProductID()%>"><%=list.getValue().getProduct().getProductName()%></a>
@@ -139,8 +139,8 @@
                                                         <i style="color:#898989;font-style: normal;">TỔNG TIỀN:</i> <%=formatter.format(cart.total())%>₫
                                                     </span>
                                                 </div>
-                                                <div class="action"><a id="gocart" href="/cart.jsp">Giỏ hàng</a></div>
-                                                <div class="action"><a id="gocart" href="/checkout.jsp">Thanh toán</a></div>
+                                                <div class="action"><a id="gocart" href="../gio-hang">Giỏ hàng</a></div>
+                                                <div class="action"><a id="gocart" href="../xac-nhan">Thanh toán</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -149,7 +149,7 @@
                                 </ul>
                             </div>
                             <div class="col-xs-12 hidden-sm hidden-md hidden-lg header-search">
-                                <form action="SearchServlet" method="POST">
+                                <form action="../SearchServlet" method="POST">
                                     <div class="input-group header_xs_search">
                                         <input type="text" class="form-control header_xs_search_input" maxlength="70" name="query" id="" placeholder="Tìm kiếm...">
                                         <span class="input-group-btn">
@@ -168,8 +168,8 @@
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                         </button>
-                                        <a href="./cart.jsp" class="xs-cart-btn hidden-sm hidden-md hidden-lg">
-                                            <img src="./images/shop/cart.png" alt="CART">
+                                        <a href="../gio-hang" class="xs-cart-btn hidden-sm hidden-md hidden-lg">
+                                            <img src="../images/shop/cart.png" alt="CART">
                                             <span class="cart-number"><%=cart.countItem()%></span>
                                         </a>
                                     </div>
@@ -177,9 +177,9 @@
                                         <ul class="nav navbar-nav">
                                             <!-- Grid 12 Menu -->
                                             <li class="fali"><a href="/" title="Trang chủ">Trang chủ</a></li>
-                                            <li class="fali"><a href="./introduce.jsp" title="Giới thiệu">Giới thiệu</a></li>
+                                            <li class="fali"><a href="../gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
                                             <li class="dropdown yamm-fw">
-                                                <a class="a_medr1" href="./all.jsp?pages=1">Sản phẩm</a><a href="/collections/all" data-toggle="dropdown" class="clickshowarrow a_medr2" title="Sản phẩm"><i class="fa fa-angle-down"></i></a>
+                                                <a class="a_medr1" href="/ta-ca-san-pham/pages-1">Sản phẩm</a><a href="/collections/all" data-toggle="dropdown" class="clickshowarrow a_medr2" title="Sản phẩm"><i class="fa fa-angle-down"></i></a>
                                                 <div class="arrow"></div>
                                                 <ul class="dropdown-menu dropdown-menu-right col-md-12 homemenudropdown">
                                                     <div class="container">
@@ -192,7 +192,7 @@
                                                                     %>
                                                                     <div class="col-xs-12 col-sm-3 r">
                                                                         <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="product.jsp?producer=<%=c.getProducerID()%>&pages=1" title="<%=c.getProducerName()%>"><%=c.getProducerName()%></a></li>
+                                                                            <li class="list-group-item"><a href="../san-pham-theo-loai/<%=c.getProducerID()%>/pages=1" title="<%=c.getProducerName()%>"><%=c.getProducerName()%></a></li>
                                                                         </ul>
                                                                     </div>                                                                 
                                                                     <% }%>
@@ -202,7 +202,7 @@
                                                     </div>
                                                 </ul>
                                             </li>
-                                            <li class="fali"><a href="./support.jsp" title="Liên hệ">Liên hệ</a></li>
+                                            <li class="fali"><a href="../lien-he" title="Liên hệ">Liên hệ</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@
                                             </a>
                                             <ul class="dropdown-menu dropdown_Menu1" aria-labelledby="dropdown_Menu1">
                                                 <li>
-                                                    <form action="SearchServlet" method="POST">
+                                                    <form action="../SearchServlet" method="POST">
                                                         <div class="input-group search_form_action">
                                                             <input type="text" class="form-control" maxlength="70" name="query" id="search" placeholder="Nhập từ khóa tìm kiếm...">
                                                             <span class="input-group-btn">
@@ -231,7 +231,7 @@
                                     </li>
                                     <li class="cart dropdown">
                                         <a href="#" class="a_hv_cart_dropdown" id="dLabel1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="./images/shop/cart.png" alt="CART">
+                                            <img src="../images/shop/cart.png" alt="CART">
                                             <span class="cart-number"><%=cart.countItem()%></span>
                                         </a>
                                         <%if(cart.countItem()==0){%>
@@ -246,10 +246,10 @@
                                                 <div class="control-container">
                                                     <div class="row">
                                                     <a class="cart-close" title="Xóa" href="CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>" onclick="Bizweb.removeItem(2022657)">
-                                                        <img class="item-remove" src="./images/shop/itemclose.png">
+                                                        <img class="item-remove" src="../images/shop/itemclose.png">
                                                     </a>
                                                     <div class="col-md-10 cart-left">
-                                                        <img src="./images/product/<%=list.getValue().getProduct().getProductImage()%>">
+                                                        <img src="../images/product/<%=list.getValue().getProduct().getProductImage()%>">
                                                     </div>
                                                     <div class="col-md-14 cart-right">
                                                         <div class="cart-title">

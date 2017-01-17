@@ -72,7 +72,7 @@
                                                 %>
                                                 <tr class="first odd">                                                    
                                                     <td>
-                                                        <a href='/orders.jsp?bill=<%=bill.getBillID()%>'>#<%=bill.getBillID()%></a>
+                                                        <a href='../chi-tiet-don-hang/bill=<%=bill.getBillID()%>'>#<%=bill.getBillID()%></a>
                                                     </td>
                                                     <td><%=bill.getBillDate()%></td>
                                                     <td><%=bill.getBillPayment()%></td>
@@ -127,8 +127,8 @@
                                     </table>
                                     <ul class="checkout">
                                         <li>
-                                            <button onclick="window.location.href='../change_pass.jsp'" width="100%" class="btn mini_btn btn-block">ĐỔI MẬT KHẨU</button>
-                                            <button onclick="window.location.href='../update_user.jsp'" width="100%" class="btn mini_btn btn-block">CẬP NHẬT THÔNG TIN</button>
+                                            <button onclick="window.location.href='../doi-mat-khau'" width="100%" class="btn mini_btn btn-block">ĐỔI MẬT KHẨU</button>
+                                            <button onclick="window.location.href='../cap-nhat-thong-tin'" width="100%" class="btn mini_btn btn-block">CẬP NHẬT THÔNG TIN</button>
                                         </li>
                                     </ul>
                                 </div>

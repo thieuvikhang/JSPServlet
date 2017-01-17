@@ -13,29 +13,29 @@
         <meta http-equiv="content-language" content="vi" />
 <!--        <meta property="og:type" content="website">
         <meta property="og:title" content="Ranger theme">-->
-        <meta property="og:image" content="./images/shop/logo.png">
-        <meta property="og:image:secure_url" content="./images/shop/logo.png">
+        <meta property="og:image" content="../images/shop/logo.png">
+        <meta property="og:image:secure_url" content="../images/shop/logo.png">
 <!--        <meta property="og:url" content="//ranger-theme.bizwebvietnam.net">
         <meta property="og:site_name" content="Ranger theme">
         <link rel="canonical" href="//ranger-theme.bizwebvietnam.net">-->
 <!--        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
         <!-- Favorite Icons
         ============================================================================== -->
-        <link rel="icon" href="./images/shop/favicon.png" type="image/x-icon" />
+        <link rel="icon" href="../images/shop/favicon.png" type="image/x-icon" />
         <!-- Web Fonts & Font Awesome
         ============================================================================== -->
         <link href='//fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100italic,100,500,500italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
         <link href='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/font-awesome.css?1479951271873' rel='stylesheet' type='text/css' />
         <!-- CSS styles | Thứ tự bootstrap.css trước custom.css sau
         ============================================================================== -->
-        <link href='./css/normalize.css' rel='stylesheet' type='text/css' />
-        <link href='./css/owl.carousel.css' rel='stylesheet' type='text/css' />
-        <link href='./css/owl.theme.css' rel='stylesheet' type='text/css' />
-        <link href='./css/slick.css' rel='stylesheet' type='text/css' />
-        <link href='./css/bootstrap.css' rel='stylesheet' type='text/css' />
-<!--        <link href='./css/main.css' rel='stylesheet' type='text/css' />-->
-        <link href='./css/bootstrap-select.css' rel='stylesheet' type='text/css' />
-<!--        <link href='./css/menustyle.css' rel='stylesheet' type='text/css' />-->
+        <link href='../css/normalize.css' rel='stylesheet' type='text/css' />
+        <link href='../css/owl.carousel.css' rel='stylesheet' type='text/css' />
+        <link href='../css/owl.theme.css' rel='stylesheet' type='text/css' />
+        <link href='../css/slick.css' rel='stylesheet' type='text/css' />
+        <link href='../css/bootstrap.css' rel='stylesheet' type='text/css' />
+<!--        <link href='../css/main.css' rel='stylesheet' type='text/css' />-->
+        <link href='../css/bootstrap-select.css' rel='stylesheet' type='text/css' />
+<!--        <link href='../css/menustyle.css' rel='stylesheet' type='text/css' />-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
         <link href='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/main.css?1479951271873' rel='stylesheet' type='text/css' />
         
@@ -56,13 +56,13 @@
         }
         </style>
         <![endif]-->
-        <script src='./js/modernizr-2.8.3.min.js' type='text/javascript'></script>
-        <script src='./js/jquery-1.9.1.min.js' type='text/javascript'></script>
-        <script src='./js/bootstrap-select.js' type='text/javascript'></script>
-        <script src='./js/bootstrap.js' type='text/javascript'></script>
-        <script src='./js/owl.carousel.js' type='text/javascript'></script>
-        <script src='./js/jquery.magnific-popup.min.js' type='text/javascript'></script>
-        <script src='./js/jquery.elevatezoom.min.js' type='text/javascript'></script>
+        <script src='../js/modernizr-2.8.3.min.js' type='text/javascript'></script>
+        <script src='../js/jquery-1.9.1.min.js' type='text/javascript'></script>
+        <script src='../js/bootstrap-select.js' type='text/javascript'></script>
+        <script src='../js/bootstrap.js' type='text/javascript'></script>
+        <script src='../js/owl.carousel.js' type='text/javascript'></script>
+        <script src='../js/jquery.magnific-popup.min.js' type='text/javascript'></script>
+        <script src='../js/jquery.elevatezoom.min.js' type='text/javascript'></script>
 <!--    <script src='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/modernizr-2.8.3.min.js?1479951271873' type='text/javascript'></script>
         <script src='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/jquery-1.9.1.min.js?1479951271873' type='text/javascript'></script>
         <script src='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/bootstrap-select.js?1479951271873' type='text/javascript'></script>
@@ -128,7 +128,7 @@
             })(window, document, 'script', 'dataLayer', 'GTM-MS77Z9');
         </script>
         <!-- End Google Tag Manager -->
-        <link href='./css/bw-statistics-style.css' rel='stylesheet' type='text/css' />
+        <link href='../css/bw-statistics-style.css' rel='stylesheet' type='text/css' />
         <script>var ProductReviewsAppUtil = ProductReviewsAppUtil || {};</script>
     </head>
     <body>
@@ -140,29 +140,29 @@
         <meta http-equiv="content-language" content="vi" />
 <!--        <meta property="og:type" content="website">
         <meta property="og:title" content="Ranger theme">-->
-        <meta property="og:image" content="./images/shop/logo.png">
-        <meta property="og:image:secure_url" content="./images/shop/logo.png">
+        <meta property="og:image" content="../images/shop/logo.png">
+        <meta property="og:image:secure_url" content="../images/shop/logo.png">
 <!--        <meta property="og:url" content="//ranger-theme.bizwebvietnam.net">
         <meta property="og:site_name" content="Ranger theme">
         <link rel="canonical" href="//ranger-theme.bizwebvietnam.net">-->
 <!--        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
         <!-- Favorite Icons
         ============================================================================== -->
-        <link rel="icon" href="./images/shop/favicon.png" type="image/x-icon" />
+        <link rel="icon" href="../images/shop/favicon.png" type="image/x-icon" />
         <!-- Web Fonts & Font Awesome
         ============================================================================== -->
         <link href='//fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100italic,100,500,500italic,700,700italic&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
         <link href='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/font-awesome.css?1479951271873' rel='stylesheet' type='text/css' />
         <!-- CSS styles | Thứ tự bootstrap.css trước custom.css sau
         ============================================================================== -->
-        <link href='./css/normalize.css' rel='stylesheet' type='text/css' />
-        <link href='./css/owl.carousel.css' rel='stylesheet' type='text/css' />
-        <link href='./css/owl.theme.css' rel='stylesheet' type='text/css' />
-        <link href='./css/slick.css' rel='stylesheet' type='text/css' />
-        <link href='./css/bootstrap.css' rel='stylesheet' type='text/css' />
-        <link href='./css/main.css' rel='stylesheet' type='text/css' />
-        <link href='./css/bootstrap-select.css' rel='stylesheet' type='text/css' />
-        <link href='./css/menustyle.css' rel='stylesheet' type='text/css' />
+        <link href='../css/normalize.css' rel='stylesheet' type='text/css' />
+        <link href='../css/owl.carousel.css' rel='stylesheet' type='text/css' />
+        <link href='../css/owl.theme.css' rel='stylesheet' type='text/css' />
+        <link href='../css/slick.css' rel='stylesheet' type='text/css' />
+        <link href='../css/bootstrap.css' rel='stylesheet' type='text/css' />
+        <link href='../css/main.css' rel='stylesheet' type='text/css' />
+        <link href='../css/bootstrap-select.css' rel='stylesheet' type='text/css' />
+        <link href='../css/menustyle.css' rel='stylesheet' type='text/css' />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
         <link href='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/main.css?1479951271873' rel='stylesheet' type='text/css' />       
         
@@ -182,13 +182,13 @@
         }
         </style>
         <![endif]-->
-        <script src='./js/modernizr-2.8.3.min.js' type='text/javascript'></script>
-        <script src='./js/jquery-1.9.1.min.js' type='text/javascript'></script>
-        <script src='./js/bootstrap-select.js' type='text/javascript'></script>
-        <script src='./js/bootstrap.js' type='text/javascript'></script>
-        <script src='./js/owl.carousel.js' type='text/javascript'></script>
-        <script src='./js/jquery.magnific-popup.min.js' type='text/javascript'></script>
-        <script src='./js/jquery.elevatezoom.min.js' type='text/javascript'></script>
+        <script src='../js/modernizr-2.8.3.min.js' type='text/javascript'></script>
+        <script src='../js/jquery-1.9.1.min.js' type='text/javascript'></script>
+        <script src='../js/bootstrap-select.js' type='text/javascript'></script>
+        <script src='../js/bootstrap.js' type='text/javascript'></script>
+        <script src='../js/owl.carousel.js' type='text/javascript'></script>
+        <script src='../js/jquery.magnific-popup.min.js' type='text/javascript'></script>
+        <script src='../js/jquery.elevatezoom.min.js' type='text/javascript'></script>
 <!--    <script src='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/modernizr-2.8.3.min.js?1479951271873' type='text/javascript'></script>
         <script src='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/jquery-1.9.1.min.js?1479951271873' type='text/javascript'></script>
         <script src='//bizweb.dktcdn.net/100/052/640/themes/134620/assets/bootstrap-select.js?1479951271873' type='text/javascript'></script>
@@ -254,5 +254,5 @@
             })(window, document, 'script', 'dataLayer', 'GTM-MS77Z9');
         </script>
         <!-- End Google Tag Manager -->
-        <link href='./css/bw-statistics-style.css' rel='stylesheet' type='text/css' />
+        <link href='../css/bw-statistics-style.css' rel='stylesheet' type='text/css' />
         <script>var ProductReviewsAppUtil = ProductReviewsAppUtil || {};</script>

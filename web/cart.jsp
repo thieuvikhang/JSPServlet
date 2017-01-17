@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="cart_div_center col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-                                <form action="/cart.jsp" method="post" id="cart_form" class="clearfix big_screen_form table-responsive">
+                                <form action="../gio-hang" method="post" id="cart_form" class="clearfix big_screen_form table-responsive">
                                     <table class="table big_screen">
                                         <!--HÀNG TIÊU ĐỀ-->
                                         <tr class="cart_title">
@@ -80,7 +80,7 @@
                                             </td>
                                             <!--tên sản phẩm-->
                                             <td class="cart_item_title">
-                                                <a href="detail.jsp?product=<%=list.getValue().getProduct().getProductID()%>" title="<%=list.getValue().getProduct().getProductName()%>"><%=list.getValue().getProduct().getProductName()%></a>
+                                                <a href="../product/<%=list.getValue().getProduct().getProductID()%>" title="<%=list.getValue().getProduct().getProductName()%>"><%=list.getValue().getProduct().getProductName()%></a>
                                             </td>
                                             <!--giá-->
                                             <td class="cart_price_item"> <%=formatter.format(list.getValue().getProduct().getProductPriceReal())%></td>
@@ -91,7 +91,7 @@
                                             <!--thành tiền-->
                                             <td class="cart_price_total"><%= formatter.format(list.getValue().getQuantity() * list.getValue().getProduct().getProductPriceReal()) %></td>
                                             <!--xóa-->
-                                            <td class="cart_item_close"><a href="CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>" data-id="1420708"><i class="fa fa-trash"></i></a></td>
+                                            <td class="cart_item_close"><a href="../CartServlet?command=remove&productID=<%=list.getValue().getProduct().getProductID()%>" data-id="1420708"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                         <% }%>
                                     </table>
@@ -105,13 +105,13 @@
                                                 </div>
                                             </div>
                                             <div class="cart_checkout_pay pull-right text-right col-xs-12 pull-right text-right no-padding-lr">
-                                                <a class="btn btn-default shop_link" href="/all.jsp?pages=1" role="button">Mua Thêm</a>
+                                                <a class="btn btn-default shop_link" href="../ta-ca-san-pham/pages-1" role="button">Mua Thêm</a>
                                                 <button class="btn btn-default" name="update" type="submit">Cập nhật</button>
-                                                <a class="btn btn-default" href="CartServlet?command=delete&productID=<%=0%>" type="button">Xóa hết</a>
+                                                <a class="btn btn-default" href="../CartServlet?command=delete&productID=<%=0%>" type="button">Xóa hết</a>
 <!--                                                <button href="CartServlet?command=removeAll" id="empty_cart_button" class="btn btn-default" value="empty_cart" name="update_cart_action" type="button">
                                                     <span><span>Xóa hết</span></span>
                                                 </button>-->
-                                                <a class="btn btn-default" href="/checkout.jsp" type="button">Thanh toán</a>
+                                                <a class="btn btn-default" href="../xac-nhan" type="button">Thanh toán</a>
                                             </div>
                                         </div>
                                     </div>

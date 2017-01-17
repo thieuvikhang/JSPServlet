@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <link href='./css/bpr-products-module.css' rel='stylesheet' type='text/css' />
+        <link href='../css/bpr-products-module.css' rel='stylesheet' type='text/css' />
         <div class="bizweb-product-reviews-module"></div>
         <footer id="footer" class="footer">
             <div id="back-top">
@@ -128,11 +128,10 @@
                         <div class="col-xs-12 col-sm-7 col-sm-push-5">
                             <div class="pull-right">
                                 <ul>
-                                    <li><a href="/" title="Trang chủ">Trang chủ</a></li>
-                                    <li><a href="./introduce.jsp" title="Giới thiệu">Giới thiệu</a></li>
-                                    <li><a href="./all.jsp" title="Sản phẩm">Sản phẩm</a></li>
-<!--                                    <li><a href="#" title="Tin tức">Tin tức</a></li>-->
-                                    <li><a href="./support.jsp" title="Liên hệ">Liên hệ</a></li>
+                                    <li><a href="../" title="Trang chủ">Trang chủ</a></li>
+                                    <li><a href="../gioi-thieu" title="Giới thiệu">Giới thiệu</a></li>
+                                    <li><a href="../ta-ca-san-pham/pages-1" title="Sản phẩm">Sản phẩm</a></li>
+                                    <li><a href="../lien-he" title="Liên hệ">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>

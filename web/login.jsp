@@ -77,7 +77,7 @@
                                                         </div>
                                                     </li>
                                                     <li><a href="javascript:void(0);" onclick="showRecoverPasswordForm()" class="a_forget_pass" style="color:#898989;padding-right:15px">Quên mật khẩu?</a></li>
-                                                    <li><a class="hover_underline" href="./register.jsp">Đăng ký tài khoản mới</a></li>
+                                                    <li><a class="hover_underline" href="../dang-ky">Đăng ký tài khoản mới</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -88,7 +88,7 @@
                                 </div>
                                 <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-style form-login" id="recover-password" style="display: none">
                                     <h3 class="form-heading">Bạn quên mật khẩu?</h3>
-                                    <form accept-charset='UTF-8' action='./RandomPassServlet' id='recover_customer_password' method='post'>
+                                    <form accept-charset='UTF-8' action='../RandomPassServlet' id='recover_customer_password' method='post'>
                                         <input name='FormType' type='hidden' value='recover_customer_password' />
                                         <input name='utf8' type='hidden' value='true' />
                                         <p class="text-center">Nhập email của bạn, chúng tôi sẽ gửi email tới cho bạn | <a class="hover_underline" href="javascript:void(0);" onclick="hideRecoverPasswordForm();return false;">Trở lại đăng nhập</a></p>

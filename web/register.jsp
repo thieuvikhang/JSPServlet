@@ -103,7 +103,7 @@
                                                             <label for="c2"><span></span>Đăng kí nhận tin tức qua email </label>
                                                         </div>
                                                     </li>
-                                                    <li><a class="hover_underline" href="./login.jsp">Đăng nhập</a></li>
+                                                    <li><a class="hover_underline" href="../dang-nhap">Đăng nhập</a></li>
                                                 </ul>
                                             </div>
                                         </div>

@@ -134,15 +134,15 @@
                                                 {
                                             %>
                                            <div class="product_item col-xs-12">
-                                                <form action="CartServlet?command=plus&productID=<%=p.getProductID()%>" method="post" class="product_item_form">
+                                                <form action="../CartServlet?command=plus&productID=<%=p.getProductID()%>" method="post" class="product_item_form">
                                                     <div>
                                                         <div class="col-sm-5 col-md-5 no-padding-l">
                                                             <div class="product-img-parent">
-                                                                <a class="product-img" href="detail.jsp?product=<%=p.getProductID()%>"><img src="./images/product/<%=p.getProductImage()%>" alt="<%=p.getProductName()%>"></a>
+                                                                <a class="product-img" href="../product/<%=p.getProductID()%>"><img src="../images/product/<%=p.getProductImage()%>" alt="<%=p.getProductName()%>"></a>
                                                             </div>
                                                         </div>
                                                         <div class="col-sm-7 col-md-7 righcontent">
-                                                            <h5 class="product-name"><a href="detail.jsp?product=<%=p.getProductID()%>"><%=p.getProductName()%></a></h5>
+                                                            <h5 class="product-name"><a href="../product/<%=p.getProductID()%>"><%=p.getProductName()%></a></h5>
                                                             <div class="description">
                                                                 <% for (Cpu Cpu : cpuDAO.getCpuNameID(p.getCpuID()))  { %>
                                                                 <h6>Bộ xử lý: <%=Cpu.getCpuName()%>, <%=p.getProductCpuDetail()%></h6>
@@ -169,9 +169,9 @@
                                                             </div>
                                                             <div class="product-action-btn-list">
                                                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                                                    <a class="btn btn-default btn-lg addtocart" href="CartServlet?command=plus&productID=<%=p.getProductID()%>">MUA NGAY</a>
+                                                                    <a class="btn btn-default btn-lg addtocart" href="../CartServlet?command=plus&productID=<%=p.getProductID()%>">MUA NGAY</a>
 <!--                                                                    <button class="product-action btn-red addtocart add-to-cart btn btn-default btn-lg" type="submit" id="button-cart">MUA NGAY</button>-->
-                                                                    <button class="btn btn-default btn-black btn-lg"><a href="detail.jsp?product=<%=p.getProductID()%>">CHI TIẾT</a></button>
+                                                                    <button class="btn btn-default btn-black btn-lg"><a href="../product/<%=p.getProductID()%>">CHI TIẾT</a></button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -190,24 +190,24 @@
                                             %>
                                             <div class="col-xs-12 col-sm-6 col-md-4">
                                                 <div class="product_item">
-                                                    <form action="CartServlet?command=plus&productID=<%=p.getProductID()%>" class="product_item_form" method="post">
+                                                    <form action="../CartServlet?command=plus&productID=<%=p.getProductID()%>" class="product_item_form" method="post">
                                                         <div class="product-gird">
                                                             <div class="product-img-parent">
-                                                                <a class="product-img" href="detail.jsp?product=<%=p.getProductID()%>" title="<%=p.getProductName()%>">
+                                                                <a class="product-img" href="../product/<%=p.getProductID()%>" title="<%=p.getProductName()%>">
                                                                     <img class="product-img-first" src="./images/product/<%=p.getProductImage()%>" alt="<%=p.getProductName()%>">
                                                                 </a>
                                                                 <div class="product-action-btn">
                                                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                                                        <a class="btn btn-default btn-lg addtocart" href="CartServlet?command=plus&productID=<%=p.getProductID()%>">MUA NGAY</a>
+                                                                        <a class="btn btn-default btn-lg addtocart" href="../CartServlet?command=plus&productID=<%=p.getProductID()%>">MUA NGAY</a>
 <!--                                                                        <button class="product-action btn-red addtocart add-to-cart btn btn-default btn-lg" type="submit" id="button-cart">MUA NGAY</button>-->
-                                                                        <a href="detail.jsp?product=<%=p.getProductID()%>" class="btn btn-default btn-black btn-lg">CHI TIẾT</a>
+                                                                        <a href="../product/<%=p.getProductID()%>" class="btn btn-default btn-black btn-lg">CHI TIẾT</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <span class="product-price text-center">
                                                                 <b class="productminprice"><%=formatter.format(p.getProductPrice())%></b>
                                                             </span>
-                                                            <h3 class="product-name"><a href="detail.jsp?product=<%=p.getProductID()%>" title="<%=p.getProductName()%>"><%=p.getProductName()%></a></h3>
+                                                            <h3 class="product-name"><a href="../product/<%=p.getProductID()%>" title="<%=p.getProductName()%>"><%=p.getProductName()%></a></h3>
                                                             <div style="display:none">
                                                                 <input type="hidden" name="variantId" value="2024175" />
                                                             </div>
@@ -235,7 +235,7 @@
                                                     <ul class="pagination">                                                                                         
                                                       
                                                         <%for(int i=1;i<=(total/pagesize)+1;i++){%>
-                                                        <li><a href="quicksearch.jsp?lsp=<%=lsp%>&nsx=<%=nsx%>&khoanggia=<%=khoanggia%>&manhinh=<%=manhinh%>&cpu=<%=cpu%>&ram=<%=ram%>&ocung=<%=ocung%>&pages=<%=i%>"><%=i%></a></li>
+                                                        <li><a href="../quicksearch.jsp?lsp=<%=lsp%>&nsx=<%=nsx%>&khoanggia=<%=khoanggia%>&manhinh=<%=manhinh%>&cpu=<%=cpu%>&ram=<%=ram%>&ocung=<%=ocung%>&pages=<%=i%>"><%=i%></a></li>
                                                         <% }%>
                                                     </ul>
                                                 </div>

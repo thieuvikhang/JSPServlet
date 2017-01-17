@@ -136,7 +136,7 @@
                             </div>
                             <div class="col-md-7 col-md-pull-5">
                                 <div class="section-article contactpage">
-                                    <form accept-charset='UTF-8' action='FeedbackServlet' id='contact' method='post'>
+                                    <form accept-charset='UTF-8' action='../FeedbackServlet' id='contact' method='post'>
                                         <input name='FormType' type='hidden' value='contact' />
                                         <input name='utf8' type='hidden' value='true' />
                                         <!--form-errors-custom-->

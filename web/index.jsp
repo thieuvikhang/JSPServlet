@@ -33,81 +33,6 @@
             <div id="main">
                 <jsp:include page = "layout/slider.jsp"></jsp:include> 
                 <jsp:include page = "layout/contact.jsp"></jsp:include>
-<!--                <section class="news_jobs">
-                    <div class="container">
-                        <div class="row ">
-                            <div class="col-sm-6 col-md-12 div-new-news-content">
-                                <div class="row ">
-                                    <div class="col-xs-12 section-slide-header">
-                                        <h2>Tin tức mới nhất</h2>
-                                        <div class="page-owl-buttons">
-                                            <div class="page-owl-prev"><a id="new-news-pre" href="#owl-demo-new-news"><i class="fa fa-caret-left"></i></a></div>
-                                            <div class="page-owl-next"><a id="new-news-next" href="#owl-demo-new-news"><i class="fa fa-caret-right"></i></a></div>
-                                        </div>
-                                    </div>
-                                    <div id="owl-demo-new-news" class="owl-carousel owl-theme">
-                                        <div class="item">
-                                            <div class="new-item">
-                                                <div class="col-md-12">
-                                                    <div class="new-img">
-                                                        <a href="#" title="Những mẫu ghế nghỉ đa năng đáng mơ ước"><img src="./images/product/lenovo-ideapad-100.png" alt="Những mẫu ghế nghỉ đa năng đáng mơ ước"></a>
-                                                    </div>
-                                                    <h3 class="new-name"><a href="" title="Những mẫu ghế nghỉ đa năng đáng mơ ước">Những mẫu ghế nghỉ đa năng đáng mơ ước</a></h3>
-                                                    <p class="new-info">1/25/2016 4:36:00 PM</p>
-                                                    <p class="new-description">
-                                                        Những thiết kế ghế nghỉ đa năng này sẽ giúp dân văn phòng có nơi thư giãn, nạp năng lượng mà không ảnh hưởng đến mỹ quan công sở".... <a href="/nhung-mau-ghe-nghi-da-nang-dang-mo-uoc-cho-dan-van-phong">[Đọc tiếp]</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="new-item">
-                                                <div class="col-md-12">
-                                                    <div class="new-img">
-                                                        <a href="/4-thiet-ke-phong-ngu-hien-dai-dang-de-mo-uoc" title="4 thiết kế phòng ngủ hiện đại đáng để mơ ước"><img src="./images/product/lenovo-ideapad-100.png" alt="4 thiết kế phòng ngủ hiện đại đáng để mơ ước"></a>
-                                                    </div>
-                                                    <h3 class="new-name"><a href="" title="4 thiết kế phòng ngủ hiện đại đáng để mơ ước">4 thiết kế phòng ngủ hiện đại đáng để mơ ước</a></h3>
-                                                    <p class="new-info">1/25/2016 4:28:00 PM</p>
-                                                    <p class="new-description">
-                                                        Những thiết kế phòng ngủ năng động, hiện đại nhưng cũng không kém phần ấn tượng dưới đây có thể sẽ khiến bạn mê mẩn và ao ước có... <a href="/4-thiet-ke-phong-ngu-hien-dai-dang-de-mo-uoc">[Đọc tiếp]</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="new-item">
-                                                <div class="col-md-12">
-                                                    <div class="new-img">
-                                                        <a href="/" title="Những món đồ nội thất đẹp đến không tưởng"><img src="./images/product/lenovo-ideapad-100.png" alt="Những món đồ nội thất đẹp đến không tưởng"></a>
-                                                    </div>
-                                                    <h3 class="new-name"><a href="" title="Những món đồ nội thất đẹp đến không tưởng">Những món đồ nội thất đẹp đến không tưởng</a></h3>
-                                                    <p class="new-info">1/25/2016 4:22:00 PM</p>
-                                                    <p class="new-description">
-                                                        Chất liệu tre, trúc vốn được mặc định với sự giản dị, đơn sơ, truyền thống. Song, những thiết kế đồ nội thất từ tre trúc dưới đây sẽ... <a href="/nhung-mon-do-noi-that-dep-den-khong-tuong">[Đọc tiếp]</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="new-item">
-                                                <div class="col-md-12">
-                                                    <div class="new-img">
-                                                        <a href="#" title="Những mẫu ghế nghỉ đa năng đáng mơ ước"><img src="./images/product/lenovo-ideapad-100.png" alt="Những mẫu ghế nghỉ đa năng đáng mơ ước"></a>
-                                                    </div>
-                                                    <h3 class="new-name"><a href="" title="Những mẫu ghế nghỉ đa năng đáng mơ ước">Những mẫu ghế nghỉ đa năng đáng mơ ước</a></h3>
-                                                    <p class="new-info">1/25/2016 4:36:00 PM</p>
-                                                    <p class="new-description">
-                                                        Những thiết kế ghế nghỉ đa năng này sẽ giúp dân văn phòng có nơi thư giãn, nạp năng lượng mà không ảnh hưởng đến mỹ quan công sở".... <a href="/nhung-mau-ghe-nghi-da-nang-dang-mo-uoc-cho-dan-van-phong">[Đọc tiếp]</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>-->
                 <section class="featured_projects">
                     <div class="container">
                         <div class="row ">
@@ -152,10 +77,10 @@
                                             %>
                                             <div class="col-sm-6 col-md-4 projects-item-content">
                                                 <div class="projects-item">
-                                                    <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                    <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                     <div class="projects-item-info">
-                                                        <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                        <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                        <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                        <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -170,10 +95,10 @@
                                                 <div class="item">
                                                     <div class="col-xs-12 projects-item-content">
                                                         <div class="projects-item">
-                                                            <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                            <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                             <div class="projects-item-info">
-                                                                <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                                <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                                <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                                <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -196,10 +121,10 @@
                                             %>
                                             <div class="col-sm-6 col-md-4 projects-item-content">
                                                 <div class="projects-item">
-                                                    <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                    <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                     <div class="projects-item-info">
-                                                        <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                        <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                        <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                        <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -215,10 +140,10 @@
                                                 <div class="item">
                                                     <div class="col-xs-12 projects-item-content">
                                                         <div class="projects-item">
-                                                            <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                            <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                             <div class="projects-item-info">
-                                                                <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                                <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                                <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                                <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -241,10 +166,10 @@
                                             %>
                                             <div class="col-sm-6 col-md-4 projects-item-content">
                                                 <div class="projects-item">
-                                                    <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                    <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                     <div class="projects-item-info">
-                                                        <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                        <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                        <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                        <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -260,10 +185,10 @@
                                                 <div class="item">
                                                     <div class="col-xs-12 projects-item-content">
                                                         <div class="projects-item">
-                                                            <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                            <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                             <div class="projects-item-info">
-                                                                <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                                <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                                <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                                <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -286,10 +211,10 @@
                                             %>
                                             <div class="col-sm-6 col-md-4 projects-item-content">
                                                 <div class="projects-item">
-                                                    <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                    <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                     <div class="projects-item-info">
-                                                        <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                        <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                        <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                        <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -305,10 +230,10 @@
                                                 <div class="item">
                                                     <div class="col-xs-12 projects-item-content">
                                                         <div class="projects-item">
-                                                            <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                            <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                             <div class="projects-item-info">
-                                                                <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                                <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                                <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                                <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -331,10 +256,10 @@
                                             %>
                                             <div class="col-sm-6 col-md-4 projects-item-content">
                                                 <div class="projects-item">
-                                                    <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                    <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                     <div class="projects-item-info">
-                                                        <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                        <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                        <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                        <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -350,10 +275,10 @@
                                                 <div class="item">
                                                     <div class="col-xs-12 projects-item-content">
                                                         <div class="projects-item">
-                                                            <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                            <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                             <div class="projects-item-info">
-                                                                <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                                <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                                <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                                <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -376,10 +301,10 @@
                                             %>
                                             <div class="col-sm-6 col-md-4 projects-item-content">
                                                 <div class="projects-item">
-                                                    <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                    <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                     <div class="projects-item-info">
-                                                        <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                        <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                        <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                        <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -395,10 +320,10 @@
                                                 <div class="item">
                                                     <div class="col-xs-12 projects-item-content">
                                                         <div class="projects-item">
-                                                            <a href="detail.jsp?product=<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
+                                                            <a href="product/<%=pnew.getProductID()%>"><img src="./images/product/<%=pnew.getProductImage()%>" alt="<%=pnew.getProductName()%>"></a>
                                                             <div class="projects-item-info">
-                                                                <h3 class="projects-item-title"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
-                                                                <p class="projects-item-description"><a href="detail.jsp?product=<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
+                                                                <h3 class="projects-item-title"><a href="product/<%=pnew.getProductID()%>"><%=pnew.getProductName()%></a></h3>
+                                                                <p class="projects-item-description"><a href="product/<%=pnew.getProductID()%>"><%=formatter.format(pnew.getProductPriceReal())%></a></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -439,19 +364,19 @@
                                 <div class="item">
                                     <div class="col-md-12">
                                         <div class="product_item">
-                                            <form action="CartServlet?command=plus&productID=<%=p.getProductID()%>" class="product_item_form" method="post">
+                                            <form action="../CartServlet?command=plus&productID=<%=p.getProductID()%>" class="product_item_form" method="post">
                                                 <div class="product-gird">
                                                     <div class="product-img-parent">
                                                         <% if(p.getProductSale() > 0 ){ %>
                                                         <div class="sale_tag">- <%=p.getProductSale()%>%</div>
                                                         <% }%>
-                                                        <a class="product-img" href="detail.jsp?product=<%=p.getProductID()%>" title="<%=p.getProductName()%>">
+                                                        <a class="product-img" href="product/<%=p.getProductID()%>" title="<%=p.getProductName()%>">
                                                             <img class="product-img-first" src="./images/product/<%=p.getProductImage()%>" alt="<%=p.getProductName()%>">
                                                         </a>
                                                         <div class="product-action-btn">
                                                             <div class="btn-group" role="group" aria-label="Basic example">
-                                                                <a class="btn btn-default btn-lg addtocart" href="CartServlet?command=plus&productID=<%=p.getProductID()%>">CHỌN SẢN PHẨM</a>
-                                                                <a href="detail.jsp?product=<%=p.getProductID()%>" class="btn btn-default btn-black btn-lg">CHI TIẾT</a>
+                                                                <a class="btn btn-default btn-lg addtocart" href="../CartServlet?command=plus&productID=<%=p.getProductID()%>">CHỌN SẢN PHẨM</a>
+                                                                <a href="product/<%=p.getProductID()%>" class="btn btn-default btn-black btn-lg">CHI TIẾT</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -461,7 +386,7 @@
                                                         <del><%=formatter.format(p.getProductPrice())%></del>
                                                         <% }%>
                                                     </span>
-                                                    <h3 class="product-name"><a href="detail.jsp?product=<%=p.getProductID()%>" title="<%=p.getProductName()%>"><%=p.getProductName()%></a></h3>
+                                                    <h3 class="product-name"><a href="product/<%=p.getProductID()%>" title="<%=p.getProductName()%>"><%=p.getProductName()%></a></h3>
 <!--                                                    <div style="display:none">
                                                         <select id="product-selectors" name="variantId" style="display:none">
                                                             <option lỗi liquid unknown operator roduct value="2023875">Đỏ - <%=formatter.format(p.getProductPriceReal())%></option>

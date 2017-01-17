@@ -40,7 +40,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div id="login" class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-style form-login">
-                                    <form accept-charset='UTF-8' action="UserServlet" method="POST">
+                                    <form accept-charset='UTF-8' action="../UserServlet" method="POST">
                                         <input name='FormType' type='hidden' value='customer_login' />
                                         <input name='utf8' type='hidden' value='true' />
                                         <input type="hidden" value="change" name="command" id="command"/>
@@ -65,7 +65,7 @@
                                         <div class="row info-input">
                                             <div class="">
                                                 <ul>
-                                                    <li><a class="hover_underline" href="./update_user.jsp">Cập nhật thông tin tài khoảng</a></li>
+                                                    <li><a class="hover_underline" href="../cap-nhat-thong-tin">Cập nhật thông tin tài khoảng</a></li>
                                                 </ul>
                                             </div>
                                         </div>

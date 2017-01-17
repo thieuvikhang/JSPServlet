@@ -84,7 +84,7 @@
                                             {
                                             %>
                                             <tr>
-                                                <td><a href='detail.jsp?product=<%=billDetail.getProductID()%>'><%=productDAO.getProduct(billDetail.getProductID()).getProductName()%></a></td>
+                                                <td><a href='../product/<%=billDetail.getProductID()%>'><%=productDAO.getProduct(billDetail.getProductID()).getProductName()%></a></td>
                                                 <td><%=formatter.format(billDetail.getPrice())%></td>
                                                 <td><%=billDetail.getQuantity()%></td>
                                                 <td><%=formatter.format(billDetail.getPrice() * billDetail.getQuantity())%></td>

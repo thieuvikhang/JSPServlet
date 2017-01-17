@@ -24,8 +24,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>JSP Page</title>
-        <link href='./css/main.css' rel='stylesheet' type='text/css' />        
-        <link href='./css/radiobutton.css' rel='stylesheet' type='text/css' />
+        <link href='../css/main.css' rel='stylesheet' type='text/css' />        
+        <link href='../css/radiobutton.css' rel='stylesheet' type='text/css' />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
     </head>
     <body>
@@ -48,7 +48,7 @@
                     {
                     %>
                     <li class="">
-                        <a href="product.jsp?producer=<%=c.getProducerID()%>&pages=1" class="link_title_css link_title_<%=c.getProducerID()%>"> <%=c.getProducerName()%>
+                        <a href="../product.jsp?producer=<%=c.getProducerID()%>&pages=1" class="link_title_css link_title_<%=c.getProducerID()%>"> <%=c.getProducerName()%>
                         </a>
                     </li>
                     <%
@@ -65,7 +65,7 @@
                 <div class="dropdown-content-title"><i class="fa fa-search"></i> TÌM KIẾM NHANH</div>
                 <ul class="cd-dropdown-content">
                     
-                        <form id="formsearch" action="QuickSearchServlet" method="POST">
+                        <form id="formsearch" action="../QuickSearchServlet" method="POST">
                             <div class="panel-group" id="accordion">
                         
     <!--                    NHÀ SẢN XUẤT  -->
@@ -239,50 +239,6 @@
             </nav>
         </div> 
     <!-- .cd-dropdown-wrapper -->
-<!--    <br>
-        <div class="widget-sidebar-item banner em-effect06" style="margin-top: 30px;">
-            <h3 class="widget-sidebar-name">THẺ TAGS</h3>
-            <ul class="widget-sidebar-list products_tags">
-                <li><a href='/collections/all/ban' title='ban'>Bàn</a></li>
-                <li><a href='/collections/all/ban-cafe' title='ban-cafe'>Bàn Cafe</a></li>
-                <li><a href='/collections/all/ghe-sofa' title='ghe-sofa'>Ghế Sofa</a></li>
-            </ul>
-        </div>
-        <div class="widget-sidebar-item banner em-effect06">
-            <h3 class="widget-sidebar-name">Sản phẩm bán chạy</h3>
-            <div class="product_item col-xs-12">
-                <form action="/cart/add" class="product_item_form" method="post">
-                    <div class="row">
-                        <div class="product-img-parent col-sm-4 col-md-4 no-padding-lr">
-                            <a class="product-img" href="/ghe-thu-gian-xanh-ngoc"><img src="./images/product/lenovo-ideapad-100.png" alt="Ghế thư gi&#227;n xanh ngọc"></a>
-                        </div>
-                        <div class="col-sm-8 col-md-8 righcontent">
-                            <h5 class="product-name"><a href="/ghe-thu-gian-xanh-ngoc">PRODUCT 1</a></h5>
-                            <span class="product-price">
-                                <b class="productminprice">1.600.000₫</b>
-                            </span>
-                        </div>
-                    </div>
-                     End . 
-                </form>
-            </div>
-            <div class="product_item col-xs-12">
-                <form action="/cart/add" class="product_item_form" method="post">
-                    <div class="row">
-                        <div class="product-img-parent col-sm-4 col-md-4 no-padding-lr">
-                            <a class="product-img" href="/ghe-trang-tri"><img src="./images/product/lenovo-ideapad-100.png" alt="Ghế trang tr&#237;"></a>
-                        </div>
-                        <div class="col-sm-8 col-md-8 righcontent">
-                            <h5 class="product-name"><a href="/ghe-trang-tri">PRODUCT 2</a></h5>
-                            <span class="product-price">
-                                <b class="productminprice">2.300.000₫</b>
-                            </span>
-                        </div>
-                    </div>
-                     End . 
-                </form>
-            </div>
-        </div>-->
         <div id="bw-statistics"></div>
         </div>
     </body>

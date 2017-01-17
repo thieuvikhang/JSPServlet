@@ -19,27 +19,27 @@
                         <div id="owl-demo-slide" class="owl-carousel owl-theme">
                                 <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/slider-laptop.jpg" alt="Slide">
+                                        <img src="../images/slider/slider-laptop.jpg" alt="Slide">
                                     </a>
                                 </div>
                                 <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/slider-case.jpg" alt="Slide">
+                                        <img src="../images/slider/slider-case.jpg" alt="Slide">
                                     </a>
                                 </div>
                                 <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/slider-cm.jpg" alt="Slide">
+                                        <img src="../images/slider/slider-cm.jpg" alt="Slide">
                                     </a>
                                 </div>
                                 <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/slider-i7-2.jpg" alt="Slide">
+                                        <img src="../images/slider/slider-i7-2.jpg" alt="Slide">
                                     </a>
                                 </div>
                                  <div class="item">
                                     <a href="#" title="Slide">
-                                        <img src="./images/slider/slider-ati.jpg"" alt="Slide">
+                                        <img src="../images/slider/slider-ati.jpg"" alt="Slide">
                                     </a>
                                 </div>
                             </div>

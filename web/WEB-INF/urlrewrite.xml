@@ -7,4 +7,56 @@
         <from>^/world.jsp?country=([a-z]+)&amp;city=([a-z]+)$</from>
         <to>/world/$1/$2</to>
     </outbound-rule>
+    <rule>
+        <from>/product/([0-9]+)</from>
+        <to>/detail.jsp?product=$1</to>
+    </rule>
+<!--    <rule>
+        <from>^/san-pham-theo-loai/([0-9]+)/pages=([0-9]+)$</from>
+        <to>/product.jsp?producer=$1&pages=$2</to>
+    </rule>-->
+    <rule>
+        <from>/chi-tiet-don-hang/bill=([0-9]+)</from>
+        <to>/orders.jsp?bill=$1</to>
+    </rule>
+    <rule>
+        <from>/lien-he</from>
+        <to>/support.jsp</to>
+    </rule>
+    <rule>
+        <from>/gioi-thieu</from>
+        <to>/introduce.jsp</to>
+    </rule>
+    <rule>
+        <from>/ta-ca-san-pham/pages-([0-9]+)</from>
+        <to>/all.jsp?pages=$1</to>
+    </rule>
+    <rule>
+        <from>/dang-ky</from>
+        <to>/register.jsp</to>
+    </rule>
+    <rule>
+        <from>/dang-nhap</from>
+        <to>/login.jsp</to>
+    </rule>
+    <rule>
+        <from>/tai-khoang</from>
+        <to>/account.jsp</to>
+    </rule>
+    <rule>
+        <from>/xac-nhan</from>
+        <to>/checkout.jsp</to>
+    </rule>
+    <rule>
+        <from>/gio-hang</from>
+        <to>/cart.jsp</to>
+    </rule>
+    <rule>
+        <from>/doi-mat-khau</from>
+        <to>/change_pass.jsp</to>
+    </rule>
+    <rule>
+        <from>/cap-nhat-thong-tin</from>
+        <to>/update_user.jsp</to>
+    </rule>
 </urlrewrite>
