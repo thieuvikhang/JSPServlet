@@ -30,7 +30,7 @@
                                 <span class="policy-icon"><i class="fa fa-envelope"></i></span> <!-- End .policy-icon -->
                                 <span class="policy-text">
                                     <h2>Email:</h2>
-                                    <p>support@gmail.com</p>
+                                    <p>KTLaptop@gmail.com</p>
                                 </span> <!-- End .policy-text -->
                             </div> <!-- End .policy-item -->
                         </div>

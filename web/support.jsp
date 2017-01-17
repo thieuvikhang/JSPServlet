@@ -123,12 +123,12 @@
                         <div class="row">
                             <div class="col-md-5 col-md-push-7">
                                 <div class="widget-item">
-                                    <a href="#" class="contact-logo"><img src="//bizweb.dktcdn.net/100/052/640/themes/134620/assets/logo1.png?1479951271873" alt=""></a>
+                                    <a href="#" class="contact-logo"><img src="./images/shop/logo2.png" alt=""></a>
                                     <ul class="widget-menu">
-                                        <li class="widget-address"><span>Rengar mang lại cho bạn một không gian sống hoàn toàn mới với các dòng sản phẩm về nội thất chất lượng cao, chủng loại phong phú và đa dạng.</span></li>
-                                        <li class="widget-address"><i class="fa fa-map-marker"></i> <span>Tầng 4 - Tòa nhà Hanoi Group - 442 Đội Cấn - Ba Đình - Hà Nội</span></li>
-                                        <li><i class="fa fa-phone"></i> <span>(04) 6674 2332</span></li>
-                                        <li><i class="fa fa-envelope"></i> <span>support@bizweb.vn</span></li>
+                                        <li class="widget-address"><span>KTLaptop mang lại cho bạn những sản phẩm Laptop tốt nhất mới với các dòng sản phẩm chất lượng cao, chủng loại phong phú và đa dạng.</span></li>
+                                        <li class="widget-address"><i class="fa fa-map-marker"></i> <span>475A Điện Biên Phủ, P.25, Q.Bình Thạnh, TP.HCM</span></li>
+                                        <li><i class="fa fa-phone"></i> <span>098 7654 321</span></li>
+                                        <li><i class="fa fa-envelope"></i> <span>KTLaptop@gmail.com</span></li>
                                     </ul>
                                     <!-- End .widget-menu -->
                                 </div>

@@ -34,7 +34,7 @@
                                             <span><i class="fa fa-mobile theme_color w2"></i>098 7654 321</span> - <span>098 7654 321</span>
                                         </li>
                                         <li>
-                                            <span><i class="fa fa-envelope-o theme_color w2"></i> support@gmail.com</span>
+                                            <span><i class="fa fa-envelope-o theme_color w2"></i> KTLaptop@gmail.com</span>
                                         </li>
                                     </ul>
                                     <!-- End .widget-menu -->
