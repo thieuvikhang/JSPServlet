@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+    <outbound-rule enabled="true">
+        <from>^/world.jsp?country=([a-z]+)&amp;city=([a-z]+)$</from>
+        <to>/world/$1/$2</to>
+    </outbound-rule>
+</urlrewrite>

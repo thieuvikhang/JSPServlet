@@ -9,8 +9,11 @@
 <%@page import="java.util.Map"%>
 <%@page import="model.Item"%>
 <%@page import="model.Cart" %>
+<%@page import="model.Producer"%> 
+<%@page import="dao.ProducerDAO"%> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
          <%
+            ProducerDAO producerDAO = new ProducerDAO(); 
             Users users = new Users();
             if (session.getAttribute("user") != null) 
                 users = (Users) session.getAttribute("user");
@@ -183,46 +186,22 @@
                                                         <li class="grid-demo col-sm-12">
                                                             <div class="row">
                                                                 <div class="row-eq-height big-row-eq-height">
+                                                                    <%
+                                                                        for (Producer c : producerDAO.getListProducer())
+                                                                        {
+                                                                    %>
                                                                     <div class="col-xs-12 col-sm-3 r">
                                                                         <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="/frontpage" title="Sản phẩm mới">Sản phẩm mới</a>
-
-                                                                            </li>
+                                                                            <li class="list-group-item"><a href="product.jsp?producer=<%=c.getProducerID()%>&pages=1" title="<%=c.getProducerName()%>"><%=c.getProducerName()%></a></li>
                                                                         </ul>
-                                                                    </div>
-                                                                    <div class="col-xs-12 col-sm-3 r">
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="/san-pham-khuyen-mai" title="Sản phẩm khuyến mãi">Sản phẩm khuyến mãi</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-xs-12 col-sm-3 r">
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật">Sản phẩm nổi bật</a></li>
-                                                                        </ul>
-                                                                    </div>                                                                   
-                                                                    
-                                                                    <div class="col-xs-12 col-sm-3 r">
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật">Theo màn hình</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-xs-12 col-sm-3 r">
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật">Theo CPU</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="col-xs-12 col-sm-3 r">
-                                                                        <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="/san-pham-noi-bat" title="Sản phẩm nổi bật">Theo RAM</a></li>
-                                                                        </ul>
-                                                                    </div>
+                                                                    </div>                                                                 
+                                                                    <% }%>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                     </div>
                                                 </ul>
                                             </li>
-<!--                                            <li class="fali"><a href="#" title="Tin tức">Tin tức</a></li>-->
                                             <li class="fali"><a href="./support.jsp" title="Liên hệ">Liên hệ</a></li>
                                         </ul>
                                     </div>
