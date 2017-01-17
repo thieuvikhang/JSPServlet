@@ -43,7 +43,9 @@
             ArrayList<Image> listImages = categorydao.getListImage();            
         %>
         <div class="wrapper">
+            <%if (admin != null){%>
             <jsp:include page="./layout/header.jsp"></jsp:include>
+            <%}%>
             <div class="content-wrapper">
                 <section class="content-header">
                     <%if(pqAdmin!="disabled"){%>

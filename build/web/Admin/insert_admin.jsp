@@ -63,7 +63,9 @@
             PqDAO pqDAO = new PqDAO();
         %>
             <div class="wrapper">
+            <%if (adminid != null){%>
             <jsp:include page="./layout/header.jsp"></jsp:include>
+            <%}%>
             <div class="content-wrapper">
                 <section class="content-header">
                     <h1>

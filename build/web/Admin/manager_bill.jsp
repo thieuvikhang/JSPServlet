@@ -46,7 +46,9 @@
             ArrayList<Bill> listBill = billDAO.getListBill();          
         %>
        <div class="wrapper">
+            <%if (admin != null){%>
             <jsp:include page="./layout/header.jsp"></jsp:include>
+            <%}%>
             <div class="content-wrapper">
 <!--                MAIN------------------------------------------------------------------->
                         <section class="content">

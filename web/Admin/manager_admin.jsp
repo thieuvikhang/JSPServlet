@@ -44,7 +44,9 @@
             ArrayList<Admin> listAdmin = adminDAO.getListAdmin();            
         %>
         <div class="wrapper">
+            <%if (adminid != null){%>
             <jsp:include page="./layout/header.jsp"></jsp:include>
+            <%}%>
             <div class="content-wrapper">
                 <section class="content-header">
                     <%if(pqAdmin!="disabled"){%>
