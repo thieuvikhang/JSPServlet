@@ -142,7 +142,7 @@
                                                                 <div class="btn-group" role="group" aria-label="Basic example">
                                                                     <a class="btn btn-default btn-lg addtocart" href="CartServlet?command=plus&productID=<%=p.getProductID()%>">MUA NGAY</a>
 <!--                                                                    <button class="product-action btn-red addtocart add-to-cart btn btn-default btn-lg" type="submit" id="button-cart">MUA NGAY</button>-->
-                                                                    <button class="btn btn-default btn-black btn-lg"><a href="detail.jsp?product=<%=p.getProductID()%>">CHI TIẾT</a></button>
+                                                                    <a class="btn btn-default btn-black btn-lg" href="detail.jsp?product=<%=p.getProductID()%>">CHI TIẾT</a>
                                                                 </div>
                                                             </div>
                                                         </div>
