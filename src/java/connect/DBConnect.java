@@ -9,7 +9,7 @@ public class DBConnect
         try 
         {
             Class.forName("com.mysql.jdbc.Driver");
-            cons = (Connection) DriverManager.getConnection( "jdbc:mysql://node40993-ktlaptop.jelastic.skali.net/ktlaptop?useUnicode=true&characterEncoding=UTF-8", "root", "PYGogo32293");
+            cons = (Connection) DriverManager.getConnection( "jdbc:mysql://localhost:3306/ShopLaptop?useUnicode=true&characterEncoding=UTF-8", "root", "84348291");
         } catch (Exception e) 
         {
             e.printStackTrace();

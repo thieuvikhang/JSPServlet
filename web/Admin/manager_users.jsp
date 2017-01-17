@@ -59,8 +59,8 @@
                                      <table id="example1" class="table table-bordered table-striped display" cellspacing="0" width="100%">
                                        <thead>
                                        <tr>
-                                            <th>Mã tài khoảng</th>
-                                            <th>Tên tài khoảng</th>
+                                            <th>Mã tài khoản</th>
+                                            <th>Tên tài khoản</th>
                                             <th>Địa chỉ</th>
                                             <th>Điện thoại</th>
                                             <th>Email</th>
@@ -81,8 +81,8 @@
                                        </tbody>
                                        <tfoot>
                                        <tr>
-                                            <th>Mã tài khoảng</th>
-                                            <th>Tên tài khoảng</th>
+                                            <th>Mã tài khoản</th>
+                                            <th>Tên tài khoản</th>
                                             <th>Địa chỉ</th>
                                             <th>Điện thoại</th>
                                             <th>Email</th>
