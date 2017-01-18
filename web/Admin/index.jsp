@@ -185,9 +185,9 @@
                                                 <center>      
                                                 <% if (bill.getBillPaid()==0) {                      
                                                 %>
-                                                 <button <%=pqAdmin%> class="btn btn-danger btn-xs" onclick="location.href='../ManagerBillServlet?command=delete&bill_id=<%=bill.getBillID()%>'"><i class="glyphicon glyphicon-remove"></i> Hủy</button>
+                                                 <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<%=bill.getBillID()%>" ><i class="glyphicon glyphicon-remove"></i> Hủy</button>
                                                 <% }else {%>
-                                                <button disabled class="btn btn-danger btn-xs" onclick="location.href='../ManagerBillServlet?command=delete&bill_id=<%=bill.getBillID()%>'"><i class="glyphicon glyphicon-remove"></i> Hủy</button>
+                                                <button disabled class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-remove"></i> Hủy</button>
                                                 <%}%>
                                                 </center> 
                                             </td>
@@ -195,7 +195,7 @@
                                               <center> 
                                               <% if (bill.getBillPaid()==0) {                      
                                                 %>
-                                                <button <%=pqAdmin%> class="btn btn-primary btn-xs" onclick="location.href='../ManagerBillServlet?command=update&bill_id=<%=bill.getBillID()%>'"><i class="glyphicon glyphicon-check"></i> Xác nhận</button>
+                                                <button <%=pqAdmin%> class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalPaid<%=bill.getBillID()%>"><i class="glyphicon glyphicon-check"></i> Xác nhận</button>
                                                 <%} else {%>
                                                 <span class="label label-success"> Hoàn thành</span>
                                                 <% }%>
@@ -205,15 +205,59 @@
                                               <center> 
                                               <% if (bill.getBillFinish()==0) {                      
                                                 %>
-                                                <button <%=pqAdmin%> class="btn btn-primary btn-xs" onclick="location.href='../ManagerBillServlet?command=finish&bill_id=<%=bill.getBillID()%>'"><i class="glyphicon glyphicon-check"></i> Đã giao</button>
+                                                <button <%=pqAdmin%> class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModalFinish<%=bill.getBillID()%>"><i class="glyphicon glyphicon-check"></i> Đã giao</button>
                                                 <%} else {%>
-<!--                                                <button class="btn btn-primary btn-xs" onclick="location.href='../ManagerBillServlet?command=update&bill_id=<%=bill.getBillID()%>'"><i class="glyphicon glyphicon-justify"></i> Hoàn tất</button>-->
                                                 <span class="label label-success"> Hoàn thành</span>
                                                 <% }%>
                                               </center>
                                             </td>
                                             
                                           </tr>
+<!--                                          Hũy-->
+                                        <div class="modal fade" id="myModal<%=bill.getBillID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                              <h4 class="modal-title" id="myModalLabel">Bạn muốn hủy đơn hàng <strong>#<%=bill.getBillID()%></strong></h4>
+                                            </div>         
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                              <button type="button" class="btn btn-danger" onclick="location.href='../ManagerBillServlet?command=delete&bill_id=<%=bill.getBillID()%>'">Xác nhận</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+<!--                                          Thanh toán-->
+                                       <div class="modal fade" id="myModalPaid<%=bill.getBillID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                              <h4 class="modal-title" id="myModalLabel">Xác nhận đã thanh toán đơn hàng <strong>#<%=bill.getBillID()%></strong></h4>
+                                            </div>         
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                              <button type="button" class="btn btn-danger" onclick="location.href='../ManagerBillServlet?command=update&bill_id=<%=bill.getBillID()%>'">Xác nhận</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+<!--                                           Hoàn tất -->
+                                       <div class="modal fade" id="myModalFinish<%=bill.getBillID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                              <h4 class="modal-title" id="myModalLabel">Xác nhận đã giao đơn hàng <strong>#<%=bill.getBillID()%></strong></h4>
+                                            </div>         
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+                                              <button type="button" class="btn btn-danger" onclick="location.href='../ManagerBillServlet?command=finish&bill_id=<%=bill.getBillID()%>'">Xác nhận</button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>  
                             <% }%>
                         </tbody>
                         <tfoot>

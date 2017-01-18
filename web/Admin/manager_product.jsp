@@ -107,11 +107,11 @@
                                           <td>
                                               <center> 
                                                   <button <%=pqAdmin%> class="btn btn-primary btn-xs" onclick="location.href='${root}../Admin/update_product.jsp?product_id=<%=p.getProductID()%>'"><i class="glyphicon glyphicon-pencil"></i> Sửa</button>
-                                                    <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal2<%=p.getProductID()%>"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
+                                                    <button <%=pqAdmin%> class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModall<%=p.getProductID()%>"><i class="glyphicon glyphicon-remove"></i> Xóa</button>
                                                 </center> 
                                            </td>                                         
                                         </tr>
-                                        <div class="modal fade" id="myModal2<%=p.getProductID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                        <div class="modal fade" id="myModall<%=p.getProductID()%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                         <div class="modal-dialog" role="document">
                                           <div class="modal-content">
                                             <div class="modal-header">

@@ -108,7 +108,7 @@ public class BillDAO {
     //kiểm tra, trả về thông tin Bill theo User ID
     public ArrayList<Bill> getListBillbyUserID(String userID) throws SQLException { 
         Connection connection = DBConnect.getConnecttion();        
-        String sql = "SELECT * FROM bill WHERE user_id = '" + userID + "'";       
+        String sql = "SELECT * FROM bill WHERE user_id = '" + userID + "' ORDER BY `bill`.`bill_date` DESC";       
         PreparedStatement ps = connection.prepareCall(sql);        
         ResultSet rs = ps.executeQuery();       
         ArrayList<Bill> list = new ArrayList<>();        
