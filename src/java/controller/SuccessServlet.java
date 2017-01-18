@@ -40,7 +40,7 @@ public class SuccessServlet extends HttpServlet {
         Bill billl = (Bill) session.getAttribute("bill");
         try{
             dao.update(billl.getBillID());
-            url = "https://ktlaptop.jelastic.skali.net/orders.jsp?bill="+billl.getBillID();   
+            url = "https://ktlaptop.jelastic.skali.net/chi-tiet-don-hang/bill="+billl.getBillID();   
             bill = new Bill();
             session.setAttribute("bill", bill);
         }catch(Exception e){}

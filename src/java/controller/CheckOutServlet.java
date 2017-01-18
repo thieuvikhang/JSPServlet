@@ -112,7 +112,7 @@ public class CheckOutServlet extends HttpServlet {
             bill = new Bill();
             session.setAttribute("bill", bill);
         } catch (Exception e) {}
-        response.sendRedirect("/account.jsp");
+        response.sendRedirect("/tai-khoang");
         }
         processRequest(request, response);
     }

@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Toan/Desktop/JAVA/JSPServlet/web/index.jsp</file>
+            <file>file:/C:/Users/Toan/Desktop/JAVA/JSPServlet/src/java/controller/CartServlet.java</file>
+            <file>file:/C:/Users/Toan/Desktop/JAVA/JSPServlet/web/detail.jsp</file>
+            <file>file:/C:/Users/Toan/Desktop/JAVA/JSPServlet/src/java/connect/DBConnect.java</file>
+            <file>file:/C:/Users/Toan/Desktop/JAVA/JSPServlet/nbproject/build-impl.xml</file>
+            <file>file:/C:/Users/Toan/Desktop/JAVA/JSPServlet/web/product.jsp</file>
+            <file>file:/C:/Users/Toan/Desktop/JAVA/JSPServlet/web/WEB-INF/urlrewrite.xml</file>
+        </group>
     </open-files>
 </project-private>

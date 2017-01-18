@@ -7,7 +7,7 @@
 <% 
     Users users = (Users) session.getAttribute("user");
     if (users == null) {
-        response.sendRedirect("/login.jsp");
+        response.sendRedirect("/dang-nhap");
     }
 %>
 <%@page import="model.Bill" %>

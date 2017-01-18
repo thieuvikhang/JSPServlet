@@ -11,10 +11,6 @@
         <from>/product/([0-9]+)</from>
         <to>/detail.jsp?product=$1</to>
     </rule>
-<!--    <rule>
-        <from>^/san-pham-theo-loai/([0-9]+)/pages=([0-9]+)$</from>
-        <to>/product.jsp?producer=$1&pages=$2</to>
-    </rule>-->
     <rule>
         <from>/chi-tiet-don-hang/bill=([0-9]+)</from>
         <to>/orders.jsp?bill=$1</to>
