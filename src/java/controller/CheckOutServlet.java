@@ -73,7 +73,7 @@ public class CheckOutServlet extends HttpServlet {
         bill.setBillTotal(cart.total());
         bill.setUserID(Long.parseLong(id));  
         session.setAttribute("bill", bill);
-        String urlbaokim = baokim.createRequestUrl(Long.toString(billID) , "mail.toan95@gmail.com", Long.toString(cart.total()), "0", "0", "Đơn hàng số: #"+billID, "https://ktlaptop.jelastic.skali.net/SuccessServlet", "https://ktlaptop.jelastic.skali.net/CancelServlet", "https://ktlaptop.jelastic.skali.net/orders.jsp?bill="+billID);
+        String urlbaokim = baokim.createRequestUrl(Long.toString(billID) , "mail.toan95@gmail.com", Long.toString(cart.total()), "0", "0", "Đơn hàng số: #"+billID, "https://ktlaptop.jelastic.skali.net/SuccessServlet", "https://ktlaptop.jelastic.skali.net/tai-khoang", "https://ktlaptop.jelastic.skali.net/orders.jsp?bill="+billID);
         if("Bank transfer".equals(payment))
         {
             try {  

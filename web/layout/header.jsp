@@ -192,7 +192,7 @@
                                                                     %>
                                                                     <div class="col-xs-12 col-sm-3 r">
                                                                         <ul class="list-group">
-                                                                            <li class="list-group-item"><a href="../san-pham-theo-loai/<%=c.getProducerID()%>/pages=1" title="<%=c.getProducerName()%>"><%=c.getProducerName()%></a></li>
+                                                                            <li class="list-group-item"><a href="../product.jsp?producer=<%=c.getProducerID()%>&pages=1" title="<%=c.getProducerName()%>"><%=c.getProducerName()%></a></li>
                                                                         </ul>
                                                                     </div>                                                                 
                                                                     <% }%>

@@ -31,6 +31,7 @@ public class CancelServlet extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setCharacterEncoding("utf-8");
+        
         String url = "/tai-khoang";
         RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
         rd.forward(request, response);

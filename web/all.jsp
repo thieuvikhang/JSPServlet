@@ -206,7 +206,7 @@
                                                     <ul class="pagination">                                                                                          
                                                       
                                                         <%for(int i=1;i<=(total/pagesize)+1;i++){%>
-                                                        <li><a href="all.jsp?pages=<%=i%>"><%=i%></a></li>
+                                                        <li><a href="../ta-ca-san-pham/pages-<%=i%>"><%=i%></a></li>
                                                         <%}%>
                                                       
                                                     </ul>
