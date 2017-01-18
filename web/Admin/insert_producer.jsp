@@ -69,7 +69,7 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Tên nhà sản xuất</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" name="name" required class="form-control" value="" id="inputEmail3" placeholder="Tên nhà sản xuất">
+                                        <input type="text" maxlength="50" name="name" required class="form-control" value="" id="inputEmail3" placeholder="Tên nhà sản xuất">
                                     </div>
                                   </div>
                                   
@@ -84,7 +84,7 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Link nhà sản xuất</label>
 
                                     <div class="col-sm-10">
-                                        <input type="url" name="link" required class="form-control" value="" id="inputEmail3" placeholder="Link nhà sản xuất">
+                                        <input type="url" maxlength="100" name="link" required class="form-control" value="" id="inputEmail3" placeholder="Link nhà sản xuất">
                                     </div>
                                   </div>
                                 <!-- /.box-body -->

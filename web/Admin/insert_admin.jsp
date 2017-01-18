@@ -94,7 +94,7 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Tên Admin</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" id="tenDanhMuc" name="fullname" required class="form-control" value="" id="inputEmail3" placeholder="Tên Admin">
+                                        <input type="text" id="tenDanhMuc" maxlength="50" name="fullname" required class="form-control" value="" id="inputEmail3" placeholder="Tên Admin">
                                         
                                         <span id="tenDanhMuc-result"></span> 
                                     </div>
@@ -111,14 +111,14 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 
                                     <div class="col-sm-10">
-                                      <input type="text" name="email" value="" class="form-control" id="inputEmail3" placeholder="Email">
+                                      <input type="text" maxlength="30" name="email" value="" class="form-control" id="inputEmail3" placeholder="Email">
                                     </div>
                                   </div>
                                   <div class="form-group">
                                     <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" name="password" value="" class="form-control" id="inputEmail3" placeholder="Password">
+                                        <input type="text" maxlength="50" name="password" value="" class="form-control" id="inputEmail3" placeholder="Password">
                                     </div>
                                   `</div>
                                     

@@ -74,7 +74,7 @@
                                     <label for="inputEmail3" class="col-sm-2 control-label">Tên hình ảnh</label>
 
                                     <div class="col-sm-10">
-                                        <input type="text" name="name" required class="form-control" value="" id="inputEmail3" placeholder="Tên hình ảnh">
+                                        <input type="text" maxlength="50" name="name" required class="form-control" value="" id="inputEmail3" placeholder="Tên hình ảnh">
                                     </div>
                                   </div>
                                   
